@@ -13,41 +13,42 @@ import com.aventstack.extentreports.Status;
 
 import utils.ExtentReportManager;
 
-public class TestListener implements ITestListener{
+public class TestListener implements ITestListener {
 
 	@Override
-    public void onTestFailure(ITestResult result) {
-        // Log the failure in ExtentReports
-        ExtentReportManager.getTest().log(Status.FAIL, "Test Failed: " + result.getThrowable().getMessage());
+	public void onTestFailure(ITestResult result) {
+		// Log the failure in ExtentReports
+		ExtentReportManager.getTest().log(Status.FAIL, "Test Failed: " + result.getThrowable().getMessage());
 
-        // Capture screenshot on failure
-        WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
-        if (driver != null) {
-            String screenshotPath = captureScreenshot(driver, result.getName());
-            // Attach screenshot to ExtentReport
+		// Capture screenshot on failure
+		WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
+		if (driver != null) {
+			String screenshotPath = captureScreenshot(driver, result.getName());
+			// Attach screenshot to ExtentReport
 			ExtentReportManager.getTest().addScreenCaptureFromPath(screenshotPath);
-        }
-    }
+		}
+	}
 
-    private String captureScreenshot(WebDriver driver, String testName) {
-        String screenshotDir = "C:\\Users\\admin\\eclipse-workspace\\com.dot.app\\screenshots\\";
-        String screenshotPath = screenshotDir + testName + "_failure.png";
+	private String captureScreenshot(WebDriver driver, String testName) {
+		String screenshotDir = "D:\\Git\\Feb\\com.dot.app\\screenshot\\";
+		String screenshotPath = screenshotDir + testName + "_failure.png";
 
-        // Create the screenshots directory if it doesn't exist
-        try {
-            Files.createDirectories(Paths.get(screenshotDir));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		// Create the screenshots directory if it doesn't exist
+		try {
+			Files.createDirectories(Paths.get(screenshotDir));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-        // Take screenshot and save it to the specified path
-        File screenshotFile = ((org.openqa.selenium.TakesScreenshot) driver).getScreenshotAs(org.openqa.selenium.OutputType.FILE);
-        try {
-            Files.copy(screenshotFile.toPath(), Paths.get(screenshotPath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		// Take screenshot and save it to the specified path
+		File screenshotFile = ((org.openqa.selenium.TakesScreenshot) driver)
+				.getScreenshotAs(org.openqa.selenium.OutputType.FILE);
+		try {
+			Files.copy(screenshotFile.toPath(), Paths.get(screenshotPath));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-        return screenshotPath;
-    }
+		return screenshotPath;
+	}
 }

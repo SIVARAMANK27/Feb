@@ -41,5 +41,18 @@ public class LoginPage {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
+	public void invalidCredential(String username, String password) {
+		usernameField.clear();
+		passwordField.clear();
+
+		usernameField.sendKeys(username);
+		passwordField.sendKeys(password);
+		loginButton.click();
+		
+	}
 	
+	public void loginbutton() {
+	loginButton.click();
+	usernameField.click();
+	}
 }

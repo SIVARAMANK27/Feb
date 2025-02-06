@@ -10,7 +10,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testLogin"/>
+          <include name="verify_Valid_Username_Invalid_Password"/>
         </methods>
       </class> <!-- tests.TestCase -->
     </classes>

@@ -8,7 +8,7 @@
         </Console>
 
         <!-- File Appender -->
-        <File name="File" fileName="C:\Users\admin\eclipse-workspace\com.dot.app\logs\application.log" append="false">
+        <File name="File" fileName="D:\Git\Feb\com.dot.app\logs\application.log" append="false">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %msg%n" />
         </File>
     </Appenders>

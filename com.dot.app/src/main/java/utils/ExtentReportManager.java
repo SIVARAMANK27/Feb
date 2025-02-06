@@ -10,7 +10,7 @@ public class ExtentReportManager {
 
 	    public static ExtentReports getInstance() {
 	        if (extent == null) {
-	            ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\admin\\eclipse-workspace\\com.dot.app\\reports\\extent-report.html");
+	            ExtentSparkReporter htmlReporter = new ExtentSparkReporter("D:\\Git\\Feb\\com.dot.app\\reports\\extent-report.html");
 	            extent = new ExtentReports();
 	            extent.attachReporter(htmlReporter);
 	        }
