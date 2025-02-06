@@ -1,0 +1,6 @@
+2025-02-06 11:38:42 INFO  TestCase:20 - Starting Login Test...
+2025-02-06 11:38:43 INFO  TestCase:25 - Entered username and password.
+2025-02-06 11:38:44 INFO  TestCase:31 - Retrieved welcome message
+2025-02-06 11:38:46 INFO  TestCase:20 - Starting Login Test...
+2025-02-06 11:38:47 INFO  TestCase:25 - Entered username and password.
+2025-02-06 11:38:48 INFO  TestCase:31 - Retrieved welcome message
