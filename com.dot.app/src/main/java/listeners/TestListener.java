@@ -51,4 +51,17 @@ public class TestListener implements ITestListener {
 
 		return screenshotPath;
 	}
+	
+	public void onTestSuccess(ITestResult result) {
+		// Log the failure in ExtentReports
+		ExtentReportManager.getTest().log(Status.PASS, "Test Passed ");
+
+		// Capture screenshot on failure
+		WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
+		if (driver != null) {
+			String screenshotPath = captureScreenshot(driver, result.getName());
+			// Attach screenshot to ExtentReport
+			ExtentReportManager.getTest().addScreenCaptureFromPath(screenshotPath);
+		}
+	}
 }

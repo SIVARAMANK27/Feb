@@ -9,14 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">12,539</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">7</td><td class="num">0</td><td class="num attn">3</td><td class="num attn">3</td><td class="num">39,807</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">tests.TestCase</td><td><a href="#m0">verify_Empty_Credential</a></td><td rowspan="1">1738843116190</td><td rowspan="1">604</td></tr><tr class="passedeven"><td><a href="#m1">verify_InValid_Username_valid_Password</a></td><td rowspan="1">1738843118360</td><td rowspan="1">1182</td></tr><tr class="passedeven"><td><a href="#m2">verify_InvalidCredential</a></td><td rowspan="1">1738843120899</td><td rowspan="1">1028</td></tr><tr class="passedeven"><td><a href="#m3">verify_Valid_Username_Invalid_Password</a></td><td rowspan="1">1738843123281</td><td rowspan="1">999</td></tr><tr class="passedeven"><td><a href="#m4">verify_valid_credential</a></td><td rowspan="1">1738843125655</td><td rowspan="1">1270</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.TestCase</td><td><a href="#m0">verify_ExceedLimit_validation</a></td><td rowspan="1">1739267130763</td><td rowspan="1">1120</td></tr><tr class="failedeven"><td><a href="#m1">verify_Without_DomainValidation</a></td><td rowspan="1">1739267149389</td><td rowspan="1">1324</td></tr><tr class="failedeven"><td><a href="#m2">verify_minPassword_validation</a></td><td rowspan="1">1739267155048</td><td rowspan="1">1201</td></tr><tr><th colspan="4">Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="3">tests.TestCase</td><td><a href="#m3">verify_ExceedLimit_validation</a></td><td rowspan="1">1739267127684</td><td rowspan="1">1287</td></tr><tr class="retriedeven"><td><a href="#m4">verify_Without_DomainValidation</a></td><td rowspan="1">1739267146704</td><td rowspan="1">1223</td></tr><tr class="retriedeven"><td><a href="#m5">verify_minPassword_validation</a></td><td rowspan="1">1739267152391</td><td rowspan="1">1242</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">tests.TestCase</td><td><a href="#m6">Verify_password_is_unmasked</a></td><td rowspan="1">1739267121779</td><td rowspan="1">1002</td></tr><tr class="passedeven"><td><a href="#m7">verify_Empty_Credential</a></td><td rowspan="1">1739267125300</td><td rowspan="1">412</td></tr><tr class="passedeven"><td><a href="#m8">verify_InValid_Username_valid_Password</a></td><td rowspan="1">1739267133079</td><td rowspan="1">3677</td></tr><tr class="passedeven"><td><a href="#m9">verify_InvalidCredential</a></td><td rowspan="1">1739267138305</td><td rowspan="1">1450</td></tr><tr class="passedeven"><td><a href="#m10">verify_Password_IsMasked</a></td><td rowspan="1">1739267141323</td><td rowspan="1">640</td></tr><tr class="passedeven"><td><a href="#m11">verify_Valid_Username_Invalid_Password</a></td><td rowspan="1">1739267143715</td><td rowspan="1">1067</td></tr><tr class="passedeven"><td><a href="#m12">verify_valid_credential</a></td><td rowspan="1">1739267157918</td><td rowspan="1">1529</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.TestCase#verify_Empty_Credential</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.TestCase#verify_InValid_Username_valid_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.TestCase#verify_InvalidCredential</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.TestCase#verify_Valid_Username_Invalid_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.TestCase#verify_valid_credential</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">tests.TestCase#verify_ExceedLimit_validation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title are mismatch expected [please enter maximum 16 char are allowed] but found [Please enter a correct password!]
+	at tests.TestCase.verify_ExceedLimit_validation(TestCase.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.TestCase#verify_Without_DomainValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title are mismatch expected [Invalid format error] but found [Please enter a registered email!]
+	at tests.TestCase.verify_Without_DomainValidation(TestCase.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.TestCase#verify_minPassword_validation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title are mismatch expected [please enter at leat 8 char] but found [Please enter a correct password!]
+	at tests.TestCase.verify_minPassword_validation(TestCase.java:150)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.TestCase#verify_ExceedLimit_validation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title are mismatch expected [please enter maximum 16 char are allowed] but found [Please enter a correct password!]
+	at tests.TestCase.verify_ExceedLimit_validation(TestCase.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.TestCase#verify_Without_DomainValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title are mismatch expected [Invalid format error] but found [Please enter a registered email!]
+	at tests.TestCase.verify_Without_DomainValidation(TestCase.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.TestCase#verify_minPassword_validation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Title are mismatch expected [please enter at leat 8 char] but found [Please enter a correct password!]
+	at tests.TestCase.verify_minPassword_validation(TestCase.java:150)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.TestCase#Verify_password_is_unmasked</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.TestCase#verify_Empty_Credential</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.TestCase#verify_InValid_Username_valid_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.TestCase#verify_InvalidCredential</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.TestCase#verify_Password_IsMasked</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.TestCase#verify_Valid_Username_Invalid_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.TestCase#verify_valid_credential</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

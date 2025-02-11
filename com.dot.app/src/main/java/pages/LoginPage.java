@@ -27,7 +27,7 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void login(String username, String password) {
+	public void validCrdential(String username, String password) {
 
 		usernameField.clear();
 		passwordField.clear();
@@ -48,11 +48,10 @@ public class LoginPage {
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
 		loginButton.click();
-		
 	}
 	
-	public void loginbutton() {
-	loginButton.click();
-	usernameField.click();
+	public void balnkCredential() {
+		loginButton.click();
+		usernameField.click();
 	}
 }

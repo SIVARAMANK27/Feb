@@ -10,7 +10,9 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verify_Valid_Username_Invalid_Password"/>
+          <include name="verify_minPassword_validation"/>
+          <include name="verify_ExceedLimit_validation"/>
+          <include name="verify_Without_DomainValidation"/>
         </methods>
       </class> <!-- tests.TestCase -->
     </classes>
