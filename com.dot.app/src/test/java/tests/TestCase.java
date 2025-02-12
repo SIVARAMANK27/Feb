@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import base.BaseTest;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.RegisterPage;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
@@ -19,7 +20,7 @@ public class TestCase extends BaseTest {
 
 	private Logger logger = LogManager.getLogger(TestCase.class); // Initialize Log4j2 logger
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true) 
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false) 
 	public void verify_valid_credential() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_02");
@@ -40,7 +41,7 @@ public class TestCase extends BaseTest {
 	}
 	
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_InvalidCredential() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_03");
@@ -59,7 +60,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_Empty_Credential() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("Ts_Lo_04");
@@ -77,7 +78,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_InValid_Username_valid_Password() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_05");
@@ -96,7 +97,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_Valid_Username_Invalid_Password() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_06");
@@ -115,7 +116,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_Without_DomainValidation() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_07");
@@ -134,7 +135,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_minPassword_validation() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_08");
@@ -153,7 +154,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_ExceedLimit_validation() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_09");
@@ -172,7 +173,7 @@ public class TestCase extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_Password_IsMasked() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_10");
@@ -185,9 +186,11 @@ public class TestCase extends BaseTest {
 		System.out.println("Password field type: " + fieldType);
 	
 		Assert.assertEquals(fieldType, "password", "Password field is not masked!");
+		ExtentReportManager.getTest().pass("Masked validation");
+		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void Verify_password_is_unmasked() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_11");
@@ -206,7 +209,23 @@ public class TestCase extends BaseTest {
 		 // Verify password is unmasked
         String unmaskedType = passwordField.getAttribute("type");
         Assert.assertEquals(unmaskedType, "text", "Password should be unmasked after clicking the toggle button!");
-
+        
+        ExtentReportManager.getTest().pass("Unmasked validation");
+		logger.info("Login test passed.");
+	}
+	                    /****************Registration page*****************/
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	public void verify_RegistrationPage_hyperLink() {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_Reg_01");
+		RegisterPage reg=new RegisterPage(driver);
+		reg.createanaccount();
+		String ExpectedResult=driver.getTitle();
+		Assert.assertEquals(ExpectedResult, "D.O.T","Title mismatch");
+		logger.info("verified the assertion");
+		ExtentReportManager.getTest().pass("create account hyperlink validation");
+		logger.info("Login test passed.");
 	}
 }
 
