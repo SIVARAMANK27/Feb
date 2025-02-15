@@ -4,8 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class RegisterPage {
 
@@ -40,4 +39,15 @@ public class RegisterPage {
 	public void createanaccount	() {
 		Createaccount.click();
 	}
+	
+	public void maximumUsername() {
+		String maxAllowedName = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMN";
+		teamname.clear();
+		teamname.sendKeys(maxAllowedName);
+		Assert.assertEquals(teamname.getAttribute("value").length(), 100, "Name field should allow 100 characters.");
+
+	}
+	
+	
+	
 }

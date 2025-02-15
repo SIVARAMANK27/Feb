@@ -10,7 +10,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verify_RegistrationPage_hyperLink"/>
+          <include name="verify_maximumUsername"/>
         </methods>
       </class> <!-- tests.TestCase -->
     </classes>

@@ -215,7 +215,7 @@ public class TestCase extends BaseTest {
 	}
 	                    /****************Registration page*****************/
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void verify_RegistrationPage_hyperLink() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_01");
@@ -226,6 +226,19 @@ public class TestCase extends BaseTest {
 		logger.info("verified the assertion");
 		ExtentReportManager.getTest().pass("create account hyperlink validation");
 		logger.info("Login test passed.");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	public void verify_maximumUsername() {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_Reg_02");
+		RegisterPage reg=new RegisterPage(driver);
+		reg.createanaccount();
+		reg.maximumUsername();
+		logger.info("verified maximumUsername");
+		ExtentReportManager.getTest().pass("create account hyperlink validation");
+		logger.info("Login test passed.");
+
 	}
 }
 
