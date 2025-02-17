@@ -9,8 +9,8 @@
       <class name="tests.TestCase">
         <methods>
           <include name="setUp"/>
+          <include name="PasswordValidationTest"/>
           <include name="tearDown"/>
-          <include name="verify_maximumUsername"/>
         </methods>
       </class> <!-- tests.TestCase -->
     </classes>
