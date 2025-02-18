@@ -144,25 +144,9 @@
                   <a name="PasswordValidationTest">
                   </a> <!-- PasswordValidationTest -->
                   <span class="method-name">PasswordValidationTest</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (631, 653)
-  (Session info: chrome=133.0.6943.98)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-6FOLHBH&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2ab55e47453fbece07093ba5e627647d
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at pages.RegisterPage.testPasswordValidation(RegisterPage.java:118)
-	at tests.TestCase.PasswordValidationTest(TestCase.java:382)
+                  <div class="stack-trace">java.lang.AssertionError: Alert text mismatch expected [Please enter a company password] but found []
+	at pages.RegisterPage.testPasswordValidation(RegisterPage.java:125)
+	at tests.TestCase.PasswordValidationTest(TestCase.java:381)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
@@ -181,25 +165,9 @@ Session ID: 2ab55e47453fbece07093ba5e627647d
                   <a name="PasswordValidationTest">
                   </a> <!-- PasswordValidationTest -->
                   <span class="method-name">PasswordValidationTest</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (631, 653)
-  (Session info: chrome=133.0.6943.98)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-6FOLHBH&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.98, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54124}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f0d612b378e0133a54d8a84064badd7
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at pages.RegisterPage.testPasswordValidation(RegisterPage.java:118)
-	at tests.TestCase.PasswordValidationTest(TestCase.java:382)
+                  <div class="stack-trace">java.lang.AssertionError: Alert text mismatch expected [Please enter a company password] but found []
+	at pages.RegisterPage.testPasswordValidation(RegisterPage.java:125)
+	at tests.TestCase.PasswordValidationTest(TestCase.java:381)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 30 stack frames
 </div> <!-- stack-trace -->
@@ -266,16 +234,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'PasswordValidationTest')
 data.setCell(0, 2, 'tests.TestCase')
-data.setCell(0, 3, 2441);
+data.setCell(0, 3, 1563);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'PasswordValidationTest')
 data.setCell(1, 2, 'tests.TestCase')
-data.setCell(1, 3, 2345);
+data.setCell(1, 3, 1401);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -308,15 +276,15 @@ return data;
                 <br/>
                 <span class="ignored-method-name">verify_Valid_Username_Invalid_Password</span>
                 <br/>
-                <span class="ignored-method-name">emptyValidation_username</span>
-                <br/>
                 <span class="ignored-method-name">verify_Empty_Credential</span>
+                <br/>
+                <span class="ignored-method-name">emptyValidation_username</span>
                 <br/>
                 <span class="ignored-method-name">verify_ValidTeamName</span>
                 <br/>
-                <span class="ignored-method-name">verify_emptyTeamNameFieldValidation</span>
-                <br/>
                 <span class="ignored-method-name">verify_InvalidCredential</span>
+                <br/>
+                <span class="ignored-method-name">verify_emptyTeamNameFieldValidation</span>
                 <br/>
                 <span class="ignored-method-name">verify_minPassword_validation</span>
                 <br/>
@@ -326,13 +294,13 @@ return data;
                 <br/>
                 <span class="ignored-method-name">verify_RegistrationPage_hyperLink</span>
                 <br/>
-                <span class="ignored-method-name">verify_Without_DomainValidation</span>
-                <br/>
-                <span class="ignored-method-name">verify_ValidEmailAddress</span>
-                <br/>
                 <span class="ignored-method-name">verify_valid_credential</span>
                 <br/>
                 <span class="ignored-method-name">verify_maximumTeamName</span>
+                <br/>
+                <span class="ignored-method-name">verify_Without_DomainValidation</span>
+                <br/>
+                <span class="ignored-method-name">verify_ValidEmailAddress</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -346,30 +314,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">tests.TestCase</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(org.testng.TestRunner@1e3e1014)</span>
+                <span class="method-name">setUp(org.testng.TestRunner@6f8aba08)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">PasswordValidationTest</span>
-                <span class="method-start">1748 ms</span>
+                <span class="method-start">2083 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4112 ms</span>
+                <span class="method-start">3659 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(org.testng.TestRunner@1e3e1014)</span>
-                <span class="method-start">4672 ms</span>
+                <span class="method-name">setUp(org.testng.TestRunner@6f8aba08)</span>
+                <span class="method-start">4424 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">PasswordValidationTest</span>
-                <span class="method-start">5553 ms</span>
+                <span class="method-start">5799 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8170 ms</span>
+                <span class="method-start">7444 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

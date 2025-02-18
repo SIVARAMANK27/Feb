@@ -339,7 +339,6 @@ public class TestCase extends BaseTest {
 		logger.info("verified blank text box validation");
 		ExtentReportManager.getTest().pass("Blank text box validation");
 		logger.info("Login test passed.");
-
 	}
 	
 	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
@@ -381,7 +380,7 @@ public class TestCase extends BaseTest {
 		reg.createanaccount();
 		reg.testPasswordValidation("Testing","Raman","sivaramank@gmail.com","Test@1234", "Test@1234", true);
 		logger.info("verified password validation");
-		ExtentReportManager.getTest().pass("password validatio");
+		ExtentReportManager.getTest().pass("password validation");
 		logger.info("Login test passed.");
 	}
 }

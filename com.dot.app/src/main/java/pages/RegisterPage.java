@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -120,22 +121,10 @@ public class RegisterPage {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(targetElement).click().perform();
         CreateAccount.click();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
-
-        try {
-            WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("successMessage"))); // Update locator
-            if (expectedOutcome) {
-                System.out.println("✅ Test Passed: " + Password + " | " + ConfirmPassword);
-            } else {
-                System.out.println("❌ Test Failed (Expected Failure but Passed): " + Password + " | " + ConfirmPassword);
-            }
-        } catch (Exception e) {
-            WebElement errorMessage = driver.findElement(By.id("errorMessage")); // Update locator
-            if (!expectedOutcome) {
-                System.out.println("✅ Test Passed: " + Password + " | " + ConfirmPassword);
-            } else {
-                System.out.println("❌ Test Failed (Expected Success but Failed): " + Password + " | " + ConfirmPassword);
-            }
+        
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        String expectedResult=driver.findElement(By.xpath("//div[text()=\"Please enter a company name\"]")).getText();
+        System.out.println(" "+expectedResult+" ");
+        Assert.assertEquals(expectedResult, "Please enter a company password", "Alert text mismatch");
         }
-    }
-}
+	}
