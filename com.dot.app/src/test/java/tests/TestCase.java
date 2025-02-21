@@ -1,17 +1,16 @@
 package tests;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.IRetryAnalyzer;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -25,13 +24,15 @@ public class TestCase extends BaseTest {
 
 	private Logger logger = LogManager.getLogger(TestCase.class); // Initialize Log4j2 logger
 
+	
+	 	 
 	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
-	public void verify_valid_credential() {
+	public void verify_valid_credential(String username, String password) {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_LO_02");
 
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.validCrdential("sivaramank@rajasri.net", "18Rajasri@");
+		loginPage.validCrdential(username, password);
 		logger.info("Entered user name and password.");
 
 		HomePage homePage = new HomePage(driver);
@@ -187,7 +188,7 @@ public class TestCase extends BaseTest {
 	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
 	public void verify_Password_IsMasked() {
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_LO_10");
+		ExtentReportManager.createTest("TS_LO_10"); 
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.invalidCredential("sivaramank@rajasri.net", "18Rajasri@");
 		logger.info("Entered user name and password.");
@@ -214,7 +215,7 @@ public class TestCase extends BaseTest {
 		String fieldType = passwordField.getAttribute("type");
 		System.out.println("Password field type: " + fieldType);
 
-		// Locate and click the eye/toggle icon to unmask password
+		// Locate and click the eye/toggle icon to un-mask password
 		driver.findElement(By.xpath("//input[@id=\"custom-switch\"]")).click();
 
 		// Verify password is unmasked
@@ -366,13 +367,13 @@ public class TestCase extends BaseTest {
 		ExtentReportManager.createTest("TS_Reg_08");
 		RegisterPage reg = new RegisterPage(driver);
 		reg.createanaccount();
-		reg.emptyvalidationOfEmail("Testing","Raman");
+		reg.emptyValidationOfEmail("Testing","Raman");
 		logger.info("verified blank text box validation");
 		ExtentReportManager.getTest().pass("Blank text box validation");
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
 	public void PasswordValidationTest() {
 		logger.info("Starting test case ...");
 		ExtentReportManager.createTest("TS_Reg_08");
@@ -382,5 +383,21 @@ public class TestCase extends BaseTest {
 		logger.info("verified password validation");
 		ExtentReportManager.getTest().pass("password validation");
 		logger.info("Login test passed.");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
+	public void GetListOfWebElement() {
+		logger.info("Starting test case ...");
+		ExtentReportManager.createTest("TS_Reg_08");
+		LoginPage login = new LoginPage(driver);
+		login.validCrdential("sivaramank@rajasri.net", "18Rajasri@");
+		driver.findElement(By.xpath("//span[text()=\"Projects\"]")).click();
+		List<WebElement> elements = driver.findElements(By.xpath("//section[@class=\"section\"]"));
+		for (WebElement element : elements) {
+            System.out.println(element.getText());
+        }
+		logger.info("Get list of element");
+		ExtentReportManager.getTest().pass("Try to getting list of webElement");
+		logger.info("Get list of webElement fitched successfully");
 	}
 }

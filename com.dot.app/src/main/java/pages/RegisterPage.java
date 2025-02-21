@@ -1,8 +1,6 @@
 package pages;
 
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class RegisterPage {
@@ -90,7 +86,7 @@ public class RegisterPage {
 		CreateAccount.click();
 	}
 	
-	public void emptyvalidationOfEmail(String teamName, String username) {
+	public void emptyValidationOfEmail(String teamName, String username) {
 		teamname.sendKeys(teamName);
 		userName.sendKeys(username);
 		WebElement targetElement = driver.findElement(By.xpath("//button[text()=\"Create Account\"]"));
@@ -108,12 +104,13 @@ public class RegisterPage {
 	}
 	
 	public void testPasswordValidation(String teamName, String username, String email, String Password, String ConfirmPassword, boolean expectedOutcome) {
-	     teamname.sendKeys(teamName);
-	     userName.sendKeys(username);
-		 userEmail.sendKeys(email);
+	    
+		teamname.sendKeys(teamName);
+	    userName.sendKeys(username);
+		userEmail.sendKeys(email);
 		 
-		 passwordField.clear();
-	     confirmPasswordField.clear();
+		passwordField.clear();
+	    confirmPasswordField.clear();
 	    passwordField.sendKeys(Password);
         confirmPasswordField.sendKeys(ConfirmPassword);
         

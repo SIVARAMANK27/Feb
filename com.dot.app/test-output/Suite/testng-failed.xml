@@ -9,7 +9,7 @@
       <class name="tests.TestCase">
         <methods>
           <include name="setUp"/>
-          <include name="PasswordValidationTest"/>
+          <include name="GetListOfWebElement"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.TestCase -->
