@@ -1,32 +1,688 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="20" total="21" passed="1" failed="0" skipped="0">
+<testng-results retried="2" ignored="13" total="36" passed="17" failed="2" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-21T15:17:53 IST" name="Suite" finished-at="2025-02-21T15:17:57 IST" duration-ms="4563">
+  <suite started-at="2025-03-26T16:30:55 IST" name="PageTestSuite" finished-at="2025-03-26T16:35:31 IST" duration-ms="276343">
     <groups>
     </groups>
-    <test started-at="2025-02-21T15:17:53 IST" name="Test" finished-at="2025-02-21T15:17:57 IST" duration-ms="4563">
-      <class name="tests.TestCase">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.TestCase@4dc8caa7]" started-at="2025-02-21T15:17:53 IST" name="setUp" finished-at="2025-02-21T15:17:55 IST" duration-ms="1688" status="PASS">
+    <test started-at="2025-03-26T16:30:55 IST" name="d_projectPhaseTest" finished-at="2025-03-26T16:31:39 IST" duration-ms="44838">
+      <class name="tests.d_projectPhaseTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:30:55 IST" name="setUp" finished-at="2025-03-26T16:30:57 IST" duration-ms="2083" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4b4eced1]]>
+                <![CDATA[org.testng.TestRunner@2c0d7099]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="GetListOfWebElement()[pri:0, instance:tests.TestCase@4dc8caa7]" started-at="2025-02-21T15:17:55 IST" name="GetListOfWebElement" finished-at="2025-02-21T15:17:57 IST" duration-ms="2059" status="PASS">
+        <test-method signature="AddProjectPhaseName()[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:30:57 IST" name="AddProjectPhaseName" finished-at="2025-03-26T16:31:10 IST" duration-ms="13041" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GetListOfWebElement -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.TestCase@4dc8caa7]" started-at="2025-02-21T15:17:57 IST" name="tearDown" finished-at="2025-02-21T15:17:57 IST" duration-ms="625" status="PASS">
+        </test-method> <!-- AddProjectPhaseName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:10 IST" name="tearDown" finished-at="2025-03-26T16:31:10 IST" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.TestCase -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:10 IST" name="setUp" finished-at="2025-03-26T16:31:12 IST" duration-ms="1583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2c0d7099]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchwithEditTableRecord()[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:12 IST" name="searchwithEditTableRecord" finished-at="2025-03-26T16:31:25 IST" depends-on-methods="tests.d_projectPhaseTest.AddProjectPhaseName" duration-ms="12686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchwithEditTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:25 IST" name="tearDown" finished-at="2025-03-26T16:31:25 IST" duration-ms="380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:25 IST" name="setUp" finished-at="2025-03-26T16:31:27 IST" duration-ms="1369" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2c0d7099]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithDeleteTableRecord()[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:27 IST" name="searchWithDeleteTableRecord" finished-at="2025-03-26T16:31:39 IST" depends-on-methods="tests.d_projectPhaseTest.searchwithEditTableRecord" duration-ms="12152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithDeleteTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.d_projectPhaseTest@6ff65192]" started-at="2025-03-26T16:31:39 IST" name="tearDown" finished-at="2025-03-26T16:31:39 IST" duration-ms="381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.d_projectPhaseTest -->
+    </test> <!-- d_projectPhaseTest -->
+    <test started-at="2025-03-26T16:31:40 IST" name="e_defectCategoryTest" finished-at="2025-03-26T16:32:23 IST" duration-ms="43904">
+      <class name="tests.e_defectCategoryTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:31:40 IST" name="setUp" finished-at="2025-03-26T16:31:41 IST" duration-ms="1418" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@74844f8a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addCategoryName()[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:31:41 IST" name="addCategoryName" finished-at="2025-03-26T16:31:53 IST" duration-ms="11997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCategoryName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:31:53 IST" name="tearDown" finished-at="2025-03-26T16:31:54 IST" duration-ms="1242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:31:54 IST" name="setUp" finished-at="2025-03-26T16:31:56 IST" duration-ms="1221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@74844f8a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchwithEditTableRecord()[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:31:56 IST" name="searchwithEditTableRecord" finished-at="2025-03-26T16:32:09 IST" depends-on-methods="tests.e_defectCategoryTest.addCategoryName" duration-ms="12950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchwithEditTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:32:09 IST" name="tearDown" finished-at="2025-03-26T16:32:09 IST" duration-ms="367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:32:09 IST" name="setUp" finished-at="2025-03-26T16:32:11 IST" duration-ms="1577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@74844f8a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithDeleteTableRecord()[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:32:11 IST" name="searchWithDeleteTableRecord" finished-at="2025-03-26T16:32:23 IST" depends-on-methods="tests.e_defectCategoryTest.searchwithEditTableRecord" duration-ms="12158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithDeleteTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.e_defectCategoryTest@7a560583]" started-at="2025-03-26T16:32:23 IST" name="tearDown" finished-at="2025-03-26T16:32:23 IST" duration-ms="335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.e_defectCategoryTest -->
+    </test> <!-- e_defectCategoryTest -->
+    <test started-at="2025-03-26T16:32:23 IST" name="f_defectStatusTest" finished-at="2025-03-26T16:33:07 IST" duration-ms="43319">
+      <class name="tests.f_defectStatusTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:23 IST" name="setUp" finished-at="2025-03-26T16:32:25 IST" duration-ms="1508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c945ee7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addDefectStatusName()[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:25 IST" name="addDefectStatusName" finished-at="2025-03-26T16:32:37 IST" duration-ms="11800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDefectStatusName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:37 IST" name="tearDown" finished-at="2025-03-26T16:32:37 IST" duration-ms="433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:37 IST" name="setUp" finished-at="2025-03-26T16:32:39 IST" duration-ms="1503" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c945ee7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchwithEditTableRecord()[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:39 IST" name="searchwithEditTableRecord" finished-at="2025-03-26T16:32:52 IST" depends-on-methods="tests.f_defectStatusTest.addDefectStatusName" duration-ms="12752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchwithEditTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:52 IST" name="tearDown" finished-at="2025-03-26T16:32:52 IST" duration-ms="411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:52 IST" name="setUp" finished-at="2025-03-26T16:32:54 IST" duration-ms="1559" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c945ee7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithDeleteTableRecord()[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:32:54 IST" name="searchWithDeleteTableRecord" finished-at="2025-03-26T16:33:06 IST" depends-on-methods="tests.f_defectStatusTest.searchwithEditTableRecord" duration-ms="12406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithDeleteTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.f_defectStatusTest@293a5f75]" started-at="2025-03-26T16:33:06 IST" name="tearDown" finished-at="2025-03-26T16:33:07 IST" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.f_defectStatusTest -->
+    </test> <!-- f_defectStatusTest -->
+    <test started-at="2025-03-26T16:33:07 IST" name="g_defectPriorityTest" finished-at="2025-03-26T16:33:56 IST" duration-ms="49702">
+      <class name="tests.g_defectPriorityTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:07 IST" name="setUp" finished-at="2025-03-26T16:33:08 IST" duration-ms="1453" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@51a5a8ba]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addDefectPriorityName()[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:08 IST" name="addDefectPriorityName" finished-at="2025-03-26T16:33:20 IST" duration-ms="12166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDefectPriorityName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:21 IST" name="tearDown" finished-at="2025-03-26T16:33:21 IST" duration-ms="329" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:21 IST" name="setUp" finished-at="2025-03-26T16:33:22 IST" duration-ms="1496" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@51a5a8ba]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchwithEditTableRecord()[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:22 IST" name="searchwithEditTableRecord" finished-at="2025-03-26T16:33:36 IST" depends-on-methods="tests.g_defectPriorityTest.addDefectPriorityName" duration-ms="13509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchwithEditTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:36 IST" name="tearDown" finished-at="2025-03-26T16:33:37 IST" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:37 IST" name="setUp" finished-at="2025-03-26T16:33:38 IST" duration-ms="1455" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@51a5a8ba]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchWithDeleteTableRecord()[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:38 IST" name="searchWithDeleteTableRecord" finished-at="2025-03-26T16:33:56 IST" depends-on-methods="tests.g_defectPriorityTest.searchwithEditTableRecord" duration-ms="17836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithDeleteTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.g_defectPriorityTest@7966baa7]" started-at="2025-03-26T16:33:56 IST" name="tearDown" finished-at="2025-03-26T16:33:56 IST" duration-ms="349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.g_defectPriorityTest -->
+    </test> <!-- g_defectPriorityTest -->
+    <test started-at="2025-03-26T16:33:56 IST" name="h_usersPageTest" finished-at="2025-03-26T16:34:30 IST" duration-ms="33501">
+      <class name="tests.h_usersPageTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:33:56 IST" name="setUp" finished-at="2025-03-26T16:33:58 IST" duration-ms="1404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@16eb93af]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getTableRecord()[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:33:58 IST" name="getTableRecord" finished-at="2025-03-26T16:34:06 IST" duration-ms="7658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTableRecord -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:06 IST" name="tearDown" finished-at="2025-03-26T16:34:06 IST" duration-ms="338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:06 IST" name="setUp" finished-at="2025-03-26T16:34:08 IST" duration-ms="1461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@16eb93af]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="navigateAddUsersPage()[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:08 IST" name="navigateAddUsersPage" finished-at="2025-03-26T16:34:16 IST" duration-ms="8749" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added user account] but found [Please enter an email for user!]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added user account] but found [Please enter an email for user!]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at pages.h_userPage.navigateToAddUsers(h_userPage.java:63)
+at tests.h_usersPageTest.navigateAddUsersPage(h_usersPageTest.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateAddUsersPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:16 IST" name="tearDown" finished-at="2025-03-26T16:34:17 IST" duration-ms="330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:17 IST" name="setUp" finished-at="2025-03-26T16:34:18 IST" duration-ms="1517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@16eb93af]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="navigateAddUsersPage()[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:18 IST" name="navigateAddUsersPage" finished-at="2025-03-26T16:34:29 IST" duration-ms="10464" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully added user account] but found [Please enter an email for user!]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully added user account] but found [Please enter an email for user!]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at pages.h_userPage.navigateToAddUsers(h_userPage.java:63)
+at tests.h_usersPageTest.navigateAddUsersPage(h_usersPageTest.java:36)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateAddUsersPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.h_usersPageTest@5cdd09b1]" started-at="2025-03-26T16:34:29 IST" name="tearDown" finished-at="2025-03-26T16:34:30 IST" duration-ms="1213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.h_usersPageTest -->
+    </test> <!-- h_usersPageTest -->
+    <test started-at="2025-03-26T16:34:30 IST" name="i_projectsTest" finished-at="2025-03-26T16:35:14 IST" duration-ms="44232">
+      <class name="tests.i_projectsTest">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:30 IST" name="setUp" finished-at="2025-03-26T16:34:31 IST" duration-ms="1219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@8f8717b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AddProjectPhaseName()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:31 IST" name="AddProjectPhaseName" finished-at="2025-03-26T16:34:43 IST" duration-ms="12113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddProjectPhaseName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:44 IST" name="tearDown" finished-at="2025-03-26T16:34:45 IST" duration-ms="1224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:45 IST" name="setUp" finished-at="2025-03-26T16:34:46 IST" duration-ms="1279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@8f8717b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addProjectDetails()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:46 IST" name="addProjectDetails" finished-at="2025-03-26T16:34:50 IST" depends-on-methods="tests.i_projectsTest.AddProjectPhaseName" duration-ms="3699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProjectDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:50 IST" name="tearDown" finished-at="2025-03-26T16:34:50 IST" duration-ms="240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:50 IST" name="setUp" finished-at="2025-03-26T16:34:52 IST" duration-ms="1334" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@8f8717b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="editProjectDetails()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:34:52 IST" name="editProjectDetails" finished-at="2025-03-26T16:35:05 IST" depends-on-methods="tests.i_projectsTest.addProjectDetails" duration-ms="12974" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editProjectDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:35:05 IST" name="tearDown" finished-at="2025-03-26T16:35:05 IST" duration-ms="397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:35:05 IST" name="setUp" finished-at="2025-03-26T16:35:07 IST" duration-ms="1478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@8f8717b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="deleteProjectRecords()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:35:07 IST" name="deleteProjectRecords" finished-at="2025-03-26T16:35:14 IST" depends-on-methods="tests.i_projectsTest.editProjectDetails" duration-ms="7084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteProjectRecords -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.i_projectsTest@4218500f]" started-at="2025-03-26T16:35:14 IST" name="tearDown" finished-at="2025-03-26T16:35:14 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.i_projectsTest -->
+    </test> <!-- i_projectsTest -->
+    <test started-at="2025-03-26T16:35:14 IST" name="j_defectsTest" finished-at="2025-03-26T16:35:31 IST" duration-ms="16695">
+      <class name="tests.j_defectsTest">
+        <test-method is-config="true" signature="initSuite()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:30:54 IST" name="initSuite" finished-at="2025-03-26T16:30:55 IST" duration-ms="228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSuite -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:14 IST" name="setUp" finished-at="2025-03-26T16:35:16 IST" duration-ms="1525" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@63614cdd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="addNewDefect()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:16 IST" name="addNewDefect" finished-at="2025-03-26T16:35:22 IST" duration-ms="6401" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.25', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.25', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:297)
+at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:172)
+at pages.j_defectPage.addDefect(j_defectPage.java:69)
+at tests.j_defectsTest.addNewDefect(j_defectsTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewDefect -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:22 IST" name="tearDown" finished-at="2025-03-26T16:35:23 IST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:23 IST" name="setUp" finished-at="2025-03-26T16:35:24 IST" duration-ms="1367" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@63614cdd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addNewDefect()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:24 IST" name="addNewDefect" finished-at="2025-03-26T16:35:30 IST" duration-ms="6517" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.25', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 1
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.25', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:297)
+at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:172)
+at pages.j_defectPage.addDefect(j_defectPage.java:69)
+at tests.j_defectsTest.addNewDefect(j_defectsTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewDefect -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:31 IST" name="tearDown" finished-at="2025-03-26T16:35:31 IST" duration-ms="361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="searchWithDeleteDefect()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:31 IST" name="searchWithDeleteDefect" finished-at="2025-03-26T16:35:31 IST" depends-on-methods="tests.j_defectsTest.searchWithEditText" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method j_defectsTest.searchWithDeleteDefect()[pri:0, instance:tests.j_defectsTest@ccb4b1b] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method j_defectsTest.searchWithDeleteDefect()[pri:0, instance:tests.j_defectsTest@ccb4b1b] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithDeleteDefect -->
+        <test-method signature="searchWithEditText()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:31 IST" name="searchWithEditText" finished-at="2025-03-26T16:35:31 IST" depends-on-methods="tests.j_defectsTest.addNewDefect" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method j_defectsTest.searchWithEditText()[pri:0, instance:tests.j_defectsTest@ccb4b1b] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method j_defectsTest.searchWithEditText()[pri:0, instance:tests.j_defectsTest@ccb4b1b] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchWithEditText -->
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:tests.j_defectsTest@ccb4b1b]" started-at="2025-03-26T16:35:31 IST" name="flushReport" finished-at="2025-03-26T16:35:32 IST" duration-ms="835" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushReport -->
+      </class> <!-- tests.j_defectsTest -->
+    </test> <!-- j_defectsTest -->
+  </suite> <!-- PageTestSuite -->
 </testng-results>

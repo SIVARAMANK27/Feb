@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="PageTestSuite" preserve-order="true">
+	
 	<listeners>
 		<listener class-name="listeners.TestListener" />
 	</listeners>
-	<test thread-count="5" name="Test">
+	
+	<test thread-count="5" name="d_projectPhaseTest" preserve-order="true">
 		<classes>
-			<class name="tests.TestCase" />	
+			<class name="tests.d_projectPhaseTest" />
 		</classes>
-	</test> <!--
-	Test -->
-</suite> <!--
-Suite -->
+	</test> <!--Test -->
+
+	<test thread-count="5" name="e_defectCategoryTest" preserve-order="true">
+		<classes>
+			<class name="tests.e_defectCategoryTest" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="f_defectStatusTest" preserve-order="true">
+		<classes>
+			<class name="tests.f_defectStatusTest" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="g_defectPriorityTest" preserve-order="true">
+		<classes>
+			<class name="tests.g_defectPriorityTest" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="h_usersPageTest" preserve-order="true">
+		<classes>
+			<class name="tests.h_usersPageTest" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="i_projectsTest" preserve-order="true">
+		<classes>
+			<class name="tests.i_projectsTest" />
+		</classes>
+	</test> <!--Test -->
+
+	<test thread-count="5" name="j_defectsTest" preserve-order="false">
+		<classes>
+			<class name="tests.j_defectsTest" />
+		</classes>
+	</test> <!--Test -->
+
+</suite> <!--Suite -->

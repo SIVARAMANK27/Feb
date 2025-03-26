@@ -6,13 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.TestCase">
+      <class name="tests.j_defectsTest">
         <methods>
           <include name="setUp"/>
-          <include name="GetListOfWebElement"/>
           <include name="tearDown"/>
+          <include name="initSuite"/>
+          <include name="addNewDefect"/>
+          <include name="flushReport"/>
         </methods>
-      </class> <!-- tests.TestCase -->
+      </class> <!-- tests.j_defectsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
