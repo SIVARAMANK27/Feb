@@ -20,7 +20,7 @@ public class g_defectPriorityTest extends BaseTest {
 	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void addDefectPriorityName()  {
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_01");
+		ExtentReportManager.createTest("TS_DP_01");
 		
 		String testCaseName = "defectPriorityName";
 		
@@ -50,7 +50,7 @@ public class g_defectPriorityTest extends BaseTest {
 	public void searchwithEditTableRecord(){
 		
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_01");
+		ExtentReportManager.createTest("TS_DP_02");
 		
 		String testCaseName = "editTableRecord";
 		
@@ -81,7 +81,7 @@ public class g_defectPriorityTest extends BaseTest {
 	public void searchWithDeleteTableRecord() throws InterruptedException {
 	
 			logger.info("Starting Login Test...");
-			ExtentReportManager.createTest("TS_DC_01");
+			ExtentReportManager.createTest("TS_DP_03");
 			
 			String testCaseName = "deleteTableRecord";
 			

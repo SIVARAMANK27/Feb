@@ -69,7 +69,9 @@ public class j_defectPage {
 		select4.selectByIndex(1);
 	
 		addBtn.click();
+		Thread.sleep(3000);
 		defectDescription.sendKeys(description);
+		Thread.sleep(3000);
 		stepsToReproduce.sendKeys(Steps);
 		Actions action=new Actions(driver);
 		action.moveToElement(defectCategory).click().perform();
@@ -99,8 +101,9 @@ public class j_defectPage {
 		Select select=new Select(projectList);
 		select.selectByIndex(1);
 		search.sendKeys(search1);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//div[@title=\"Edit\"]")).click();
-		Thread.sleep(5000);		
+		Thread.sleep(3000);		
 		
 		Select select1=new Select(editDefectPriority);
 		select1.selectByVisibleText(defectPriority);

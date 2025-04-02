@@ -2,6 +2,7 @@ package tests;
 
 import java.util.Map;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -21,7 +22,7 @@ public class i_projectsTest extends BaseTest{
 	 @Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 		public void AddProjectPhaseName() throws InterruptedException {
 			logger.info("Starting Login Test...");
-			ExtentReportManager.createTest("TS_PH_01");
+			ExtentReportManager.createTest("TS_P_01");
 			String testCaseName = "ValidProjectPhaseName";
 			  
 			Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME1, testCaseName);
@@ -37,6 +38,10 @@ public class i_projectsTest extends BaseTest{
 
 			// Get data from Excel
 			projectPhase.addProjectPhaseName(addPhase);
+			
+			String expectedResult=driver.getCurrentUrl();
+			Assert.assertEquals("http://106.51.127.87:3030/dot/phase.html", expectedResult, "The current url is mismatched");
+			
 			ExtentReportManager.getTest().pass("Successfully!! added project phase name --> "+ addPhase);
 			logger.info("added defect category page");
 		}
@@ -44,11 +49,12 @@ public class i_projectsTest extends BaseTest{
 	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="AddProjectPhaseName", enabled=true)
 	public void addProjectDetails() throws InterruptedException {
 	logger.info("Starting Login Test...");
-	ExtentReportManager.createTest("TS_DC_02");
+	ExtentReportManager.createTest("TS_P_02");
 		
 	String testCaseName = "addProjectDetails";
 	
 	Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+	
 	String username = testData.get("Username");
 	String password = testData.get("Password");
 	String ProjectName = testData.get("ProjectName");
@@ -61,6 +67,9 @@ public class i_projectsTest extends BaseTest{
 	
 	i_projectsPage projects=new i_projectsPage(driver);
 		projects.addProjectDetails(ProjectName, Description, StartDate, EndDate);
+		
+		String expectedResult=driver.getCurrentUrl();
+		Assert.assertEquals("http://106.51.127.87:3030/dot/projects.html", expectedResult, "The current url is mismatched");
 	
 	ExtentReportManager.getTest().pass("added a project details --> "+ ProjectName);
 	logger.info("Login test passed.");
@@ -69,7 +78,7 @@ public class i_projectsTest extends BaseTest{
 	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addProjectDetails", enabled=true)
 	public void editProjectDetails() {
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_03");
+		ExtentReportManager.createTest("TS_P_03");
 		
 		String testCaseName = "editProjectDetails";
 		
@@ -96,7 +105,7 @@ public class i_projectsTest extends BaseTest{
 	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="editProjectDetails", enabled=true)
 	public void deleteProjectRecords() throws InterruptedException {
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_04");
+		ExtentReportManager.createTest("TS_P_04");
 		
 		String testCaseName = "deleteProjectDetails";
 		

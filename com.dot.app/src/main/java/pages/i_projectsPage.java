@@ -75,7 +75,9 @@ public class i_projectsPage {
 		
 		Projects.click();
 		add.click();
+		Thread.sleep(3000);
 		projectName.sendKeys(projects);
+		Thread.sleep(3000);
 		description.sendKeys(descriptions);
 		
 		Select select=new Select(projectPhase);
@@ -111,6 +113,7 @@ public class i_projectsPage {
 					boolean project=projectName_edit.isDisplayed();
 					if(project==true) {
 						projectName_edit.clear();
+						Thread.sleep(3000);
 						projectName_edit.sendKeys(update);	
 						endDate_edit.sendKeys(updateDate);
 					}

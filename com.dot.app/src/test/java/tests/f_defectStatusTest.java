@@ -20,7 +20,7 @@ public class f_defectStatusTest extends BaseTest{
 	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void addDefectStatusName() {
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_01");
+		ExtentReportManager.createTest("TS_DS_01");
 		
 		String testCaseName = "addDefectStatus";
 		
@@ -49,7 +49,7 @@ public class f_defectStatusTest extends BaseTest{
 	public void searchwithEditTableRecord() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_02");
+		ExtentReportManager.createTest("TS_DS_02");
 		
 		String testCaseName = "editTableRecord";
 			
@@ -74,7 +74,7 @@ public class f_defectStatusTest extends BaseTest{
 	public void searchWithDeleteTableRecord() throws InterruptedException {
 
 			logger.info("Starting Login Test...");
-			ExtentReportManager.createTest("TS_DC_03");
+			ExtentReportManager.createTest("TS_DS_03");
 			
 			String testCaseName = "deleteTableRecord";
 			

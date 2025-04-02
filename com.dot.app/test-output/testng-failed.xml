@@ -17,19 +17,4 @@
       </class> <!-- tests.h_usersPageTest -->
     </classes>
   </test> <!-- h_usersPageTest(failed) -->
-  <test thread-count="5" name="j_defectsTest(failed)">
-    <classes>
-      <class name="tests.j_defectsTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="initSuite"/>
-          <include name="searchWithDeleteDefect"/>
-          <include name="addNewDefect"/>
-          <include name="searchWithEditText"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- tests.j_defectsTest -->
-    </classes>
-  </test> <!-- j_defectsTest(failed) -->
 </suite> <!-- Failed suite [PageTestSuite] -->

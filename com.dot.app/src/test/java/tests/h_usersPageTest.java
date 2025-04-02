@@ -20,7 +20,7 @@ public class h_usersPageTest extends BaseTest {
 	public void navigateAddUsersPage() throws InterruptedException {
 
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_01");
+		ExtentReportManager.createTest("TS_U_01");
 		
 		String testCaseName = "navigateAddUsers";
 		
@@ -46,7 +46,7 @@ public class h_usersPageTest extends BaseTest {
 	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void getTableRecord() throws InterruptedException {
 		logger.info("Starting Login Test...");
-		ExtentReportManager.createTest("TS_DC_02");
+		ExtentReportManager.createTest("TS_U_02");
 		
 		String testCaseName = "fetchTableRecord";
 		

@@ -46,18 +46,13 @@ public class d_projectPhase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void addProjectPhaseName(String name) {
-		try {
-			projectPhase.click();
-			add.click();
-			driver.getWindowHandle();
-			phaseName.sendKeys(name);
-			saveBtn.click();
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void addProjectPhaseName(String name) throws InterruptedException {
+		projectPhase.click();
+		add.click();
+		driver.getWindowHandle();
+		Thread.sleep(5000);
+		phaseName.sendKeys(name);
+		saveBtn.click();
 	}
 
 	public String blankValidation_popup() throws InterruptedException {
