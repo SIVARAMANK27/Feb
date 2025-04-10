@@ -122,4 +122,283 @@ public class i_projectsTest extends BaseTest{
 		ExtentReportManager.getTest().pass("Successfully!! project is deleted --> "+ search);
 		logger.info("deleted a project details");
 	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void emptyValidationForProjectName() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyValidationForProjectName";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.emptyValidationForProjectName(ProjectName);
+		
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName);
+		logger.info("deleted a project details");
+	}
+	
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void spcialCharacterNotAllowed() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "spcialCharacterNotAllowed";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.spcialCharacterNotAllowed(ProjectName);
+		
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void exceedingLimitVerification() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "exceedingLimitVerification";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.exceedingLimitVerification(ProjectName);
+		
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void leadingSpaceVerificcation() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "leadingSpaceVerificcation";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.leadingSpaceVerificcation(ProjectName);
+		
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void leadingSpaceVerificcation1() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "leadingSpaceVerificcation1";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.leadingSpaceVerificcation1(ProjectName, Description);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void exceedingLimitVerification1() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "exceedingLimitVerification1";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.exceedingLimitVerification1(ProjectName, Description);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void emptyValidationForProjectName1() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyValidationForProjectName1";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.emptyValidationForProjectName1(ProjectName, Description);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void verifyValidTextAreAvailable() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "verifyValidTextAreAvailable";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		String DropdownPhase = testData.get("DropdownPhase");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.verifyValidTextAreAvailable(ProjectName, Description, DropdownPhase);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void dontSelectProjectPhase() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "dontSelectProjectPhase";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.dontSelectProjectPhase(ProjectName, Description);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project is empty validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void verifyValidTextStatus() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "verifyValidTextStatus";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		String DropdownPhase = testData.get("DropdownPhase");
+		String DropDownStatus = testData.get("DropDownStatus");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.verifyValidTextStatus(ProjectName, Description, DropdownPhase, DropDownStatus);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void dontSelectStatus() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "dontSelectStatus";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String ProjectName = testData.get("ProjectName");
+		String Description = testData.get("Description");
+		String DropdownPhase = testData.get("DropdownPhase");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.dontSelectStatus(ProjectName, Description, DropdownPhase);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project validation --> "+ ProjectName +" and --> " +Description);
+		logger.info("deleted a project details");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	public void DateValidation() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "dateValidation";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String projectName = testData.get("ProjectName");
+		String description = testData.get("Description");
+		String startDate = testData.get("StartDate");
+		String endDate = testData.get("EndDate");
+		
+		i_projectsPage projects=new i_projectsPage(driver);
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		projects.DateValidation(projectName, description, startDate, endDate);
+		Thread.sleep(3000);
+		ExtentReportManager.getTest().pass("Successfully!! project validation --> "+ projectName +" and --> " +description);
+		logger.info("deleted a project details");
+	}
 }

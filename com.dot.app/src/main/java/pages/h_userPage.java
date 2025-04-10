@@ -90,6 +90,94 @@ public class h_userPage {
 		    }
 		    System.out.println();
 		}
+	}
+	
+	public void emailWithoutDomainExtension(String email) throws InterruptedException {
+		users.click();
+		add.click();
+		
+		userEmail.sendKeys(email);
+		Select select=new Select(userRole);
+		select.selectByIndex(1);
+		Thread.sleep(5000);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebElement toastMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toastMessage")));
+		String messageText = toastMessage.getText();
+		System.out.println("Toast Message: " + messageText);
 
+		// Validate the toast message text
+		Assert.assertEquals(messageText, "Please enter a valid email!");
+	}
+	
+	public void testEmailWithoutAtSymbol(String email) throws InterruptedException {
+		users.click();
+		add.click();
+		
+		userEmail.sendKeys(email);
+		Select select=new Select(userRole);
+		select.selectByIndex(1);
+		Thread.sleep(5000);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebElement toastMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toastMessage")));
+		String messageText = toastMessage.getText();
+		System.out.println("Toast Message: " + messageText);
+
+		// Validate the toast message text
+		Assert.assertEquals(messageText, "Please enter a valid email!");
+	}
+	
+	public void testEmailWithOnlyAtSymbol(String email) throws InterruptedException {
+		users.click();
+		add.click();
+		
+		userEmail.sendKeys(email);
+		Select select=new Select(userRole);
+		select.selectByIndex(1);
+		Thread.sleep(5000);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebElement toastMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toastMessage")));
+		String messageText = toastMessage.getText();
+		System.out.println("Toast Message: " + messageText);
+
+		// Validate the toast message text
+		Assert.assertEquals(messageText, "Please enter a valid email!");
+	}
+	
+	public void testEmptyEmailField(String email) throws InterruptedException {
+		users.click();
+		add.click();
+		
+		userEmail.sendKeys(email);
+		Select select=new Select(userRole);
+		select.selectByIndex(1);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebElement toastMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toastMessage")));
+		String messageText = toastMessage.getText();
+		System.out.println("Toast Message: " + messageText);
+
+		// Validate the toast message text
+		Assert.assertEquals(messageText, "Please enter an email for user!");
+	}
+	
+	public void testEmailWithSpaces(String email) throws InterruptedException {
+		users.click();
+		add.click();
+		
+		userEmail.sendKeys(email);
+		Select select=new Select(userRole);
+		select.selectByIndex(1);
+		Thread.sleep(5000);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebElement toastMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("toastMessage")));
+		String messageText = toastMessage.getText();
+		System.out.println("Toast Message: " + messageText);
+
+		// Validate the toast message text
+		Assert.assertEquals(messageText, "Please enter a valid email!");
 	}
 }

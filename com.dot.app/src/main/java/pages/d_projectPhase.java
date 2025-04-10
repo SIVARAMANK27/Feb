@@ -1,6 +1,7 @@
 package pages;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class d_projectPhase {
 
@@ -248,4 +250,96 @@ public class d_projectPhase {
 		}
 
 	}
-}
+	
+public void specialCharacterNotAllowed(String phaseName1) throws InterruptedException {
+		
+		Thread.sleep(5000);
+		projectPhase.click();
+
+		add.click();
+		driver.getWindowHandle();
+		phaseName.sendKeys(phaseName1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);
+		
+	}
+	
+	public void numericValueNotAllowed(String phaseName1) throws InterruptedException {
+		Thread.sleep(5000);
+		projectPhase.click();
+		add.click();
+		driver.getWindowHandle();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		phaseName.sendKeys(phaseName1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Numbers not allowed in the start!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);
+	}
+	
+	public void alphabitWithSpecialCharacterNotAllowed(String phaseName1) throws InterruptedException {
+			
+		Thread.sleep(5000);
+		projectPhase.click();
+
+		add.click();
+		driver.getWindowHandle();
+		phaseName.sendKeys(phaseName1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
+		}
+	
+	public void blankValidation(String phaseName1) throws InterruptedException {
+		Thread.sleep(5000);
+		projectPhase.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		phaseName.sendKeys(phaseName1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Please enter a name for phase!", ActualResult, "Expected result not met");
+		}
+	
+	public void ExceedingLimitVerification(String phaseName1) throws InterruptedException {
+		Thread.sleep(5000);
+		projectPhase.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		phaseName.sendKeys(phaseName1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Phase name must be within 30 characters!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);
+		}
+	
+	public void leadingSpaceVerification(String phaseName1) throws InterruptedException {
+		Thread.sleep(5000);
+		projectPhase.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		phaseName.sendKeys(phaseName1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Please enter a name for phase!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);		
+		}
+	}
+

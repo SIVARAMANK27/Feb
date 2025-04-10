@@ -1,6 +1,8 @@
 package pages;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class g_defectPriority {
 
@@ -261,4 +264,97 @@ public class g_defectPriority {
 			 e.printStackTrace();
 		}
 	}
+	
+	public void specialCharacterNotAllowed(String addPriority1) throws InterruptedException {
+		Thread.sleep(3000);
+		defectPriority.click();
+
+		add.click();
+		driver.getWindowHandle();
+		Thread.sleep(3000);
+		priorityName.sendKeys(addPriority1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);
+		
+	}
+	
+	public void numericValueNotAllowed(String addPriority1) throws InterruptedException {
+		Thread.sleep(5000);
+		defectPriority.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		priorityName.sendKeys(addPriority1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Numbers not allowed in the start!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);
+	}
+	
+	public void alphabitWithSpecialCharacterNotAllowed(String addPriority1) throws InterruptedException {
+			
+		Thread.sleep(5000);
+		defectPriority.click();
+
+		add.click();
+		driver.getWindowHandle();
+		priorityName.sendKeys(addPriority1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
+		}
+	
+	public void blankValidation(String addPriority1) throws InterruptedException {
+		Thread.sleep(5000);
+		defectPriority.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		priorityName.sendKeys(addPriority1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Please enter a name for priority!", ActualResult, "Expected result not met");
+		}
+	
+	public void ExceedingLimitVerification(String addPriority1) throws InterruptedException {
+		Thread.sleep(2000);
+		defectPriority.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		priorityName.sendKeys(addPriority1);
+		saveBtn.click();
+		cancelBtn.click();
+		Thread.sleep(1000);
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Priority name must be within 30 characters!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);
+		}
+	
+	public void leadingSpaceVerification(String addPriority1) throws InterruptedException {
+		Thread.sleep(5000);
+		defectPriority.click();
+		
+		add.click();
+		driver.getWindowHandle();
+		priorityName.sendKeys(addPriority1);
+		saveBtn.click();
+		cancelBtn.click();
+		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
+		System.out.println(ActualResult);
+		Assert.assertEquals("Please enter a name for priority!", ActualResult, "Expected result not met");
+		Thread.sleep(3000);	
+		}
 }

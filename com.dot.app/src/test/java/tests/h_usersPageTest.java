@@ -63,4 +63,115 @@ public class h_usersPageTest extends BaseTest {
 		ExtentReportManager.getTest().pass("Successfully fetched all table record listed in console");
 		logger.info("Excecution is completed");
 	}
+	
+
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void emailWithoutDomainExtension() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_02");
+		
+		String testCaseName = "emailWithoutDomain";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String email = testData.get("Email");
+		
+		b_loginPage loginPage = new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		
+		h_userPage userPage = new h_userPage(driver);
+		userPage.emailWithoutDomainExtension(email);
+		
+		ExtentReportManager.getTest().pass("successfully");
+		logger.info("Excecution is completed");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void testEmailWithoutAtSymbol() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_02");
+		
+		String testCaseName = "testEmailWithoutAtSymbol";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String email = testData.get("Email");
+		
+		b_loginPage loginPage = new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		
+		h_userPage userPage = new h_userPage(driver);
+		userPage.testEmailWithoutAtSymbol(email);
+		
+		ExtentReportManager.getTest().pass("successfully");
+		logger.info("Excecution is completed");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void testEmailWithOnlyAtSymbol() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_02");
+		
+		String testCaseName = "testEmailWithOnlyAtSymbol";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String email = testData.get("Email");
+		
+		b_loginPage loginPage = new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		
+		h_userPage userPage = new h_userPage(driver);
+		userPage.testEmailWithOnlyAtSymbol(email);
+		
+		ExtentReportManager.getTest().pass("successfully");
+		logger.info("Excecution is completed");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void testEmptyEmailField() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_02");
+		
+		String testCaseName = "testEmptyEmailField";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String email = testData.get("Email");
+		
+		b_loginPage loginPage = new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		
+		h_userPage userPage = new h_userPage(driver);
+		userPage.testEmptyEmailField(email);
+		
+		ExtentReportManager.getTest().pass("successfully");
+		logger.info("Excecution is completed");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
+	public void testEmailWithSpaces() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_02");
+		
+		String testCaseName = "testEmailWithSpaces";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String email = testData.get("Email");
+		
+		b_loginPage loginPage = new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		
+		h_userPage userPage = new h_userPage(driver);
+		userPage.testEmailWithSpaces(email);
+		
+		ExtentReportManager.getTest().pass("successfully");
+		logger.info("Excecution is completed");
+	}
 }

@@ -163,4 +163,129 @@ public class g_defectPriorityTest extends BaseTest {
 		ExtentReportManager.getTest().pass("test passed");
 		logger.info("deleted the record from table");
 	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void verifySpecialCharacterNotAllowed() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_01");
+		b_loginPage page = new b_loginPage(driver);
+		String testCaseName = "verifySpecialCharacter";
+		  
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		page.validCrdential(username, password);
+		logger.info("Entered user name and password.");
+		g_defectPriority defectPriority = new g_defectPriority(driver);
+		defectPriority.specialCharacterNotAllowed(addPriority);
+		ExtentReportManager.getTest().pass("Valid credential test passed");
+		logger.info("Login test passed.");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void verifyNumericValueNotAllowed() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_01");
+		b_loginPage page = new b_loginPage(driver);
+		String testCaseName = "verifyNumericValue";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		page.validCrdential(username, password);
+		logger.info("Entered user name and password.");
+		g_defectPriority defectPriority = new g_defectPriority(driver);
+		defectPriority.numericValueNotAllowed(addPriority);
+		ExtentReportManager.getTest().pass("Valid credential test passed");
+		logger.info("Login test passed.");
+	}
+
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void alphabitWithSpecialCharacterNotAllowed() throws InterruptedException {
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_01");
+		b_loginPage page = new b_loginPage(driver);
+		String testCaseName = "alphabitWithSpecialChar";
+		  
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		page.validCrdential(username, password);
+		
+		logger.info("Entered user name and password.");
+		g_defectPriority defectPriority = new g_defectPriority(driver);
+		defectPriority.specialCharacterNotAllowed(addPriority);
+		
+		ExtentReportManager.getTest().pass("Valid credential test passed");
+		logger.info("Login test passed.");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void blankValidation() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_LO_01");
+		
+		b_loginPage page = new b_loginPage(driver);
+		String testCaseName = "blankValidation";
+		  
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		page.validCrdential(username, password);
+		
+		g_defectPriority defectPriority = new g_defectPriority(driver);
+		defectPriority.blankValidation(addPriority);
+		
+		ExtentReportManager.getTest().pass("Valid credential test passed");
+		logger.info("Login test passed.");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
+	public void exceedingLimitVerification() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_LO_01");
+		
+		b_loginPage page = new b_loginPage(driver);
+		String testCaseName = "exceedingLimitVerification";
+		  
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		page.validCrdential(username, password);
+		
+		g_defectPriority defectPriority = new g_defectPriority(driver);
+		defectPriority.ExceedingLimitVerification(addPriority);
+		
+		ExtentReportManager.getTest().pass("Valid credential test passed");
+		logger.info("Login test passed.");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void leadingSpaceVerification() throws InterruptedException {
+		
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_LO_01");
+		
+		b_loginPage page = new b_loginPage(driver);
+		String testCaseName = "leadingSpaceVerification";
+		  
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		page.validCrdential(username, password);
+		
+		g_defectPriority defectPriority = new g_defectPriority(driver);
+		defectPriority.leadingSpaceVerification(addPriority);
+		
+		ExtentReportManager.getTest().pass("Valid credential test passed");
+		logger.info("Login test passed.");
+	}
 }
