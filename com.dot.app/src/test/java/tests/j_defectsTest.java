@@ -20,7 +20,7 @@ public class j_defectsTest extends BaseTest{
 	 private static final String SHEET_NAME = "Defects";
 	 private static final String SHEET_NAME1 = "Projects";
 	 
-	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
+	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=false)
 	public void addDefectPriorityName() throws InterruptedException  {
 			logger.info("Starting Login Test...");
 			ExtentReportManager.createTest("TS_DC_01");
@@ -48,7 +48,7 @@ public class j_defectsTest extends BaseTest{
 			logger.info("added defect category page");
 		}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class,  dependsOnMethods="addDefectPriorityName", enabled=true)
+	@Test(retryAnalyzer = RetryAnalyzer.class,  dependsOnMethods="addDefectPriorityName", enabled=false)
 	public void addProjectDetails() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_P_01");
@@ -74,7 +74,7 @@ public class j_defectsTest extends BaseTest{
 		}
 	 
 	 
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addProjectDetails", enabled = true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addProjectDetails", enabled = false)
 	public void addNewDefect() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_D_02");
@@ -101,7 +101,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("aaded the new defects");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addNewDefect", enabled = true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addNewDefect", enabled = false)
 	public void searchWithEditText() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_D_03");
@@ -124,7 +124,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Defect priority satus updated successfully!");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="searchWithEditText", enabled = true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="searchWithEditText", enabled = false)
 	public void searchWithDeleteDefect() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_D_04");
@@ -144,5 +144,257 @@ public class j_defectsTest extends BaseTest{
 		
 		ExtentReportManager.getTest().pass("Successfully!! deleted the defect priority");
 		logger.info("defect is deleted successfully !!");
+	}
+	
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void verifyEmptyStepToReproduce() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyStepToReproduce";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String Description = testData.get("Description");
+		defectpage.emptyStepToReproduce(Description);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void emptyClosureDateField() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyClosureDateField";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		defectpage.emptyClosureDateField( description,  StepToReproduce);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void emptyCategoryNameField() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyCategoryName";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		defectpage.emptyCategoryNameField( description,  StepToReproduce, TargetedClosureDate);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void checkTextAvailableCategoryName() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "checkTextAvailableCategoryName";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		String Category = testData.get("Category");
+		defectpage.checkTextAvailableCategoryNameField( description,  StepToReproduce, TargetedClosureDate, Category);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void emptyStatusField() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyStatusField";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		defectpage.emptyStatusField( description,  StepToReproduce, TargetedClosureDate);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void checkTextAvailableStatusNameField() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "checkTextAvailableStatusName";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		String Category = testData.get("Category");
+		defectpage.checkTextAvailableStatusNameField( description,  StepToReproduce, TargetedClosureDate, Category);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void emptyProrityTypeField() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyProrityTypeField";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		defectpage.emptyProrityTypeField( description,  StepToReproduce, TargetedClosureDate);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void checkTextAvailablePriorityType() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "checkTextAvailablePriority";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		String Priority = testData.get("Priority");
+		defectpage.checkTextAvailablePriority( description,  StepToReproduce, TargetedClosureDate, Priority);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	public void emptyAssigneField() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "emptyAssigneField";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		defectpage.emptyAssigneField(description,  StepToReproduce, TargetedClosureDate);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
+	}
+	
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
+	public void checkTextAvailableAssigne() throws InterruptedException {
+	
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_04");
+		
+		String testCaseName = "checkTextAvailableAssigne";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		
+		b_loginPage loginPage=new b_loginPage(driver);
+		loginPage.validCrdential(username, password);
+		j_defectPage defectpage=new j_defectPage(driver);
+		
+		String description = testData.get("Description");
+		String StepToReproduce = testData.get("StepToReproduce");
+		String TargetedClosureDate = testData.get("TargetedClosureDate");
+		String Member = testData.get("Member");
+		defectpage.checkTextAvailableAssigne(description, StepToReproduce, TargetedClosureDate, Member);
+		
+		ExtentReportManager.getTest().pass("Success");
+		logger.info("Succesfully empty field is verified");
 	}
 }

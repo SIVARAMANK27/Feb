@@ -1,12 +1,17 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class j_defectPage {
 	
@@ -126,5 +131,337 @@ public class j_defectPage {
 		System.out.println("Successfully deleted the application");
 	}
 	
+	public void emptyStepToReproduce(String description) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
 	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please enter the steps to reproduce!", "Text is mismatch");
+	}
+	
+	public void emptyClosureDateField(String description, String steps) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the target date!", "Text is mismatch");
+	}
+	
+	public void emptyCategoryNameField(String description, String steps, String ClosureDate) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the category!", "Text is mismatch");
+	}
+	
+	public void checkTextAvailableCategoryNameField(String description, String steps, String ClosureDate, String dorpDownValue) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		
+		Select select=new Select(defectCategory);
+		List<WebElement> options = select.getOptions();
+		 if (options.size() > 0) {
+	            System.out.println("Dropdown has values.");
+	            for (WebElement option : options) {
+	                System.out.println("Option: " + option.getText());
+	            }
+	        } else {
+	            System.out.println("Dropdown is empty.");
+	        }
+		 
+		 boolean found = false;
+
+	        for (WebElement option : options) {
+	            if (option.getText().equalsIgnoreCase(dorpDownValue)) {
+	                found = true;
+	                break;
+	            }
+	        }
+
+	        if (found) {
+	            System.out.println("Dropdown contains the text: " + dorpDownValue);
+	        } else {
+	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
+	        }
+		saveBtn.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the category!", "Text is mismatch");
+	}
+	
+	public void emptyStatusField(String description, String steps, String ClosureDate) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		Select select5=new Select(defectCategory);
+		select5.selectByIndex(1);
+		Thread.sleep(3000);
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the status!", "Text is mismatch");
+	}
+	
+	public void checkTextAvailableStatusNameField(String description, String steps, String ClosureDate, String dorpDownValue) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		Select select5=new Select(defectCategory);
+		select5.selectByIndex(1);
+		
+		Select select=new Select(defectStatus);
+		List<WebElement> options = select.getOptions();
+		 if (options.size() > 0) {
+	            System.out.println("Dropdown has values.");
+	            for (WebElement option : options) {
+	                System.out.println("Option: " + option.getText());
+	            }
+	        } else {
+	            System.out.println("Dropdown is empty.");
+	        }
+		 
+		 boolean found = false;
+
+	        for (WebElement option : options) {
+	            if (option.getText().equalsIgnoreCase(dorpDownValue)) {
+	                found = true;
+	                break;
+	            }
+	        }
+
+	        if (found) {
+	            System.out.println("Dropdown contains the text: " + dorpDownValue);
+	        } else {
+	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
+	        }
+		saveBtn.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the status!", "Text is mismatch");
+	}
+	
+	
+	public void emptyProrityTypeField(String description, String steps, String ClosureDate) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		Select select5=new Select(defectCategory);
+		select5.selectByIndex(1);
+		Thread.sleep(3000);
+		
+		Select select6=new Select(defectStatus);
+		select6.selectByIndex(1);
+		
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the priority!", "Text is mismatch");
+	}
+	
+	public void checkTextAvailablePriority(String description, String steps, String ClosureDate, String dorpDownValue) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		Select select5=new Select(defectCategory);
+		select5.selectByIndex(1);
+		
+		Thread.sleep(3000);
+		Select select6=new Select(defectStatus);
+		select6.selectByIndex(1);
+		
+		Select select=new Select(defectPriority);
+		List<WebElement> options = select.getOptions();
+		 if (options.size() > 0) {
+	            System.out.println("Dropdown has values.");
+	            for (WebElement option : options) {
+	                System.out.println("Option: " + option.getText());
+	            }
+	        } else {
+	            System.out.println("Dropdown is empty.");
+	        }
+		 
+		 boolean found = false;
+
+	        for (WebElement option : options) {
+	            if (option.getText().equalsIgnoreCase(dorpDownValue)) {
+	                found = true;
+	                break;
+	            }
+	        }
+
+	        if (found) {
+	            System.out.println("Dropdown contains the text: " + dorpDownValue);
+	        } else {
+	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
+	        }
+		saveBtn.click();
+		
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the priority!", "Text is mismatch");
+	}
+	
+	
+	public void emptyAssigneField(String description, String steps, String ClosureDate) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		Select select5=new Select(defectCategory);
+		select5.selectByIndex(1);
+		Thread.sleep(3000);
+		
+		Select select6=new Select(defectStatus);
+		select6.selectByIndex(1);
+		
+		Select select7=new Select(defectPriority);
+		select7.selectByIndex(2);
+		
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the assigne!", "Text is mismatch");
+	}
+	
+	public void checkTextAvailableAssigne(String description, String steps, String ClosureDate, String dorpDownValue) throws InterruptedException {
+		defect.click();
+		Select select4=new Select(projectList);
+		select4.selectByIndex(1);
+	
+		addBtn.click();
+		Thread.sleep(5000);
+		defectDescription.sendKeys(description);
+		stepsToReproduce.sendKeys(steps);
+		closureDate.sendKeys(ClosureDate);
+		Select select5=new Select(defectCategory);
+		select5.selectByIndex(1);
+		
+		Thread.sleep(3000);
+		Select select6=new Select(defectStatus);
+		select6.selectByIndex(1);
+		
+		Select select7=new Select(defectPriority);
+		select7.selectByIndex(1);
+		
+		Select select=new Select(assigne);
+		List<WebElement> options = select.getOptions();
+		 if (options.size() > 0) {
+	            System.out.println("Dropdown has values.");
+	            for (WebElement option : options) {
+	                System.out.println("Option: " + option.getText());
+	            }
+	        } else {
+	            System.out.println("Dropdown is empty.");
+	        }
+		 
+		 boolean found = false;
+
+	        for (WebElement option : options) {
+	            if (option.getText().equalsIgnoreCase(dorpDownValue)) {
+	                found = true;
+	                break;
+	            }
+	        }
+
+	        if (found) {
+	            System.out.println("Dropdown contains the text: " + dorpDownValue);
+	        } else {
+	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
+	        }
+	        
+		saveBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver,3);
+		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
+		Assert.assertTrue(errorMsg.isDisplayed());
+		
+		String expectedResult=errorMsg.getText();
+		Assert.assertEquals(expectedResult, "Please select the assignee!", "Text is mismatch");
+	}
 }
