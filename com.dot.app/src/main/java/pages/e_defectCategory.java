@@ -264,11 +264,10 @@ public class e_defectCategory {
 		categoryName.sendKeys(addPriority1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
-		Thread.sleep(3000);
-		
 	}
 	
 	public void numericValueNotAllowed(String CategoryName1) throws InterruptedException {
@@ -281,6 +280,7 @@ public class e_defectCategory {
 		categoryName.sendKeys(CategoryName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Numbers not allowed in the start!", ActualResult, "Expected result not met");
@@ -289,7 +289,7 @@ public class e_defectCategory {
 	
 	public void alphabitWithSpecialCharacterNotAllowed(String CategoryName1) throws InterruptedException {
 			
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		defectCategory.click();
 
 		add.click();
@@ -297,13 +297,14 @@ public class e_defectCategory {
 		categoryName.sendKeys(CategoryName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
 		}
 	
 	public void blankValidation(String CategoryName1) throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		defectCategory.click();
 		
 		add.click();
@@ -311,9 +312,10 @@ public class e_defectCategory {
 		categoryName.sendKeys(CategoryName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
-		Assert.assertEquals("Please enter a name for priority!", ActualResult, "Expected result not met");
+		Assert.assertEquals("Please enter a name for category!", ActualResult, "Expected result not met");
 		}
 	
 	public void ExceedingLimitVerification(String CategoryName1) throws InterruptedException {
@@ -326,9 +328,10 @@ public class e_defectCategory {
 		categoryName.sendKeys(CategoryName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
-		Assert.assertEquals("Priority name must be within 30 characters!", ActualResult, "Expected result not met");
+		Assert.assertEquals("Category name must be within 30 characters!", ActualResult, "Expected result not met");
 		Thread.sleep(3000);
 		}
 	
@@ -342,9 +345,10 @@ public class e_defectCategory {
 		categoryName.sendKeys(CategoryName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
-		Assert.assertEquals("Please enter a name for priority!", ActualResult, "Expected result not met");
+		Assert.assertEquals("Please enter a name for category!", ActualResult, "Expected result not met");
 		Thread.sleep(3000);	
 		}
 }

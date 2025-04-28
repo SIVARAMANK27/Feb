@@ -261,6 +261,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		phaseName.sendKeys(phaseName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
@@ -277,6 +278,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		phaseName.sendKeys(phaseName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Numbers not allowed in the start!", ActualResult, "Expected result not met");
@@ -293,6 +295,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		phaseName.sendKeys(phaseName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
@@ -307,6 +310,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		phaseName.sendKeys(phaseName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Please enter a name for phase!", ActualResult, "Expected result not met");
@@ -321,6 +325,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		phaseName.sendKeys(phaseName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Phase name must be within 30 characters!", ActualResult, "Expected result not met");
@@ -336,6 +341,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		phaseName.sendKeys(phaseName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Please enter a name for phase!", ActualResult, "Expected result not met");

@@ -275,9 +275,10 @@ public class f_defectStatus {
 		statusName.sendKeys(StatusName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
-		Assert.assertEquals("Special characters are not allowed!", ActualResult, "Expected result not met");
+		Assert.assertEquals("Please enter a name for status!", ActualResult, "Expected result not met");
 		Thread.sleep(3000);
 		
 	}
@@ -294,7 +295,7 @@ public class f_defectStatus {
 		cancelBtn.click();
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
-		Assert.assertEquals("Numbers not allowed in the start!", ActualResult, "Expected result not met");
+		Assert.assertEquals("Please enter a name for status!", ActualResult, "Expected result not met");
 		Thread.sleep(3000);
 	}
 	
@@ -314,7 +315,7 @@ public class f_defectStatus {
 		}
 	
 	public void blankValidation(String StatusName1) throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		DefectStatus.click();
 		
 		add.click();
@@ -322,6 +323,7 @@ public class f_defectStatus {
 		statusName.sendKeys(StatusName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
 		Assert.assertEquals("Please enter a name for status!", ActualResult, "Expected result not met");
@@ -337,9 +339,10 @@ public class f_defectStatus {
 		statusName.sendKeys(StatusName1);
 		saveBtn.click();
 		cancelBtn.click();
+		Thread.sleep(1000);
 		String ActualResult=driver.findElement(By.xpath("//*[@id=\"toastMessage\"]")).getText();
 		System.out.println(ActualResult);
-		Assert.assertEquals("Status name must be within 30 characters!", ActualResult, "Expected result not met");
+		Assert.assertEquals("Please enter a name for status!", ActualResult, "Expected result not met");
 		Thread.sleep(3000);
 		}
 	

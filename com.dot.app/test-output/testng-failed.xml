@@ -4,17 +4,65 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" name="h_usersPageTest(failed)">
+  <test thread-count="5" name="myTest(failed)">
     <classes>
       <class name="tests.h_usersPageTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="navigateAddUsersPage"/>
+          <include name="testEmailWithoutAtSymbol"/>
+          <include name="initSuite"/>
+          <include name="testEmailWithOnlyAtSymbol"/>
+          <include name="flushReport"/>
+          <include name="testEmailWithSpaces"/>
+        </methods>
+      </class> <!-- tests.h_usersPageTest -->
+      <class name="tests.b_loginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="initSuite"/>
+          <include name="verify_Without_DomainValidation"/>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- tests.b_loginPageTest -->
+      <class name="tests.e_defectCategoryTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="initSuite"/>
+          <include name="categoryBlankvalidation"/>
+          <include name="flushReport"/>
+        </methods>
+      </class> <!-- tests.e_defectCategoryTest -->
+      <class name="tests.j_defectsTest">
+        <methods>
+          <include name="checkTextAvailableAssigne"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="initSuite"/>
+          <include name="flushReport"/>
+          <include name="emptyAssigneField"/>
+        </methods>
+      </class> <!-- tests.j_defectsTest -->
+      <class name="tests.i_projectsTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="DateValidation"/>
           <include name="initSuite"/>
           <include name="flushReport"/>
         </methods>
-      </class> <!-- tests.h_usersPageTest -->
+      </class> <!-- tests.i_projectsTest -->
+      <class name="tests.g_defectPriorityTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="initSuite"/>
+          <include name="flushReport"/>
+          <include name="projectPhaseBlankvalidation"/>
+        </methods>
+      </class> <!-- tests.g_defectPriorityTest -->
     </classes>
-  </test> <!-- h_usersPageTest(failed) -->
+  </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [PageTestSuite] -->

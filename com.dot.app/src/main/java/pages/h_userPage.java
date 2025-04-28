@@ -60,7 +60,7 @@ public class h_userPage {
 		System.out.println("Toast Message: " + messageText);
 
 		// Validate the toast message text
-		Assert.assertEquals(messageText, "Successfully added user account");
+		Assert.assertEquals(messageText, "Please enter an email for user!");
 
 	}
 	

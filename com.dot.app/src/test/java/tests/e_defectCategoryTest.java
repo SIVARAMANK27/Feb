@@ -3,15 +3,18 @@ package tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.b_loginPage;
 import pages.e_defectCategory;
+import utils.CSVTestListener;
 import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class e_defectCategoryTest extends BaseTest{
 	
 	 private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
@@ -95,7 +98,7 @@ public class e_defectCategoryTest extends BaseTest{
 	}
 	
 
-	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void categoryBlankvalidation() {
 	try {
 		logger.info("Starting Login Test...");
@@ -117,7 +120,7 @@ public class e_defectCategoryTest extends BaseTest{
 	logger.info("search and deleted the record from table");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void editCategoryName() {
 	
 		try {
@@ -138,7 +141,7 @@ public class e_defectCategoryTest extends BaseTest{
 		logger.info("updated the edit field");
 	}
 	
-	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void deleteRecordFromTable() {
 		try {
 			logger.info("Starting Login Test...");
@@ -158,7 +161,7 @@ public class e_defectCategoryTest extends BaseTest{
 		logger.info("deleted the record from table");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void verifySpecialCharacterNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -178,7 +181,7 @@ public class e_defectCategoryTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void verifyNumericValueNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -198,7 +201,7 @@ public class e_defectCategoryTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void alphabitWithSpecialCharacterNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -219,7 +222,7 @@ public class e_defectCategoryTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void projectPhaseBlankvalidation() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -263,7 +266,7 @@ public class e_defectCategoryTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void leadingSpaceVerification() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");

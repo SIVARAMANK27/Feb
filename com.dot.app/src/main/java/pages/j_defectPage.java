@@ -222,7 +222,7 @@ public class j_defectPage {
 	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
 	        }
 		saveBtn.click();
-		
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());
@@ -243,8 +243,9 @@ public class j_defectPage {
 		closureDate.sendKeys(ClosureDate);
 		Select select5=new Select(defectCategory);
 		select5.selectByIndex(1);
-		Thread.sleep(3000);
+	
 		saveBtn.click();
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());
@@ -292,7 +293,7 @@ public class j_defectPage {
 	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
 	        }
 		saveBtn.click();
-		
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());
@@ -320,6 +321,7 @@ public class j_defectPage {
 		select6.selectByIndex(1);
 		
 		saveBtn.click();
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());
@@ -371,7 +373,7 @@ public class j_defectPage {
 	            System.out.println("Dropdown does NOT contain the text: " + dorpDownValue);
 	        }
 		saveBtn.click();
-		
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());
@@ -402,6 +404,7 @@ public class j_defectPage {
 		select7.selectByIndex(2);
 		
 		saveBtn.click();
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());
@@ -457,6 +460,7 @@ public class j_defectPage {
 	        }
 	        
 		saveBtn.click();
+		Thread.sleep(1000);
 		WebDriverWait wait = new WebDriverWait(driver,3);
 		WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"toastMessage\"]")));
 		Assert.assertTrue(errorMsg.isDisplayed());

@@ -3,6 +3,7 @@ package tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
@@ -10,45 +11,47 @@ import pages.b_loginPage;
 import pages.g_defectPriority;
 import pages.i_projectsPage;
 import pages.j_defectPage;
+import utils.CSVTestListener;
 import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class j_defectsTest extends BaseTest{
 	
 	 private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
 	 private static final String SHEET_NAME = "Defects";
 	 private static final String SHEET_NAME1 = "Projects";
 	 
-	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void addDefectPriorityName() throws InterruptedException  {
-			logger.info("Starting Login Test...");
-			ExtentReportManager.createTest("TS_DC_01");
-			
-			String testCaseName = "defectPriorityName";
-			
-			Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
-			Thread.sleep(5000);
-			String username = testData.get("Username");
-			String password = testData.get("Password");
-			String addPriority = testData.get("addPriority");
-			
-			b_loginPage page=new b_loginPage(driver);
-			page.validCrdential(username, password);
-			logger.info("Entered user name and password.");
-			driver.manage().window().maximize();
-			g_defectPriority defectPriority=new g_defectPriority(driver);
-			
-			defectPriority.addDefectPriorityName(addPriority);
-			
-			String expectedResult=driver.getCurrentUrl();
-			Assert.assertEquals("http://106.51.127.87:3030/dot/priority.html", expectedResult, "The current url is mismatched");
-			
-			ExtentReportManager.getTest().pass("Successfully!! added a defect priority --> " + addPriority);
-			logger.info("added defect category page");
+		logger.info("Starting Login Test...");
+		ExtentReportManager.createTest("TS_DC_01");
+		
+		String testCaseName = "defectPriorityName";
+		
+		Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		Thread.sleep(5000);
+		String username = testData.get("Username");
+		String password = testData.get("Password");
+		String addPriority = testData.get("addPriority");
+		
+		b_loginPage page=new b_loginPage(driver);
+		page.validCrdential(username, password);
+		logger.info("Entered user name and password.");
+		driver.manage().window().maximize();
+		g_defectPriority defectPriority=new g_defectPriority(driver);
+		
+		defectPriority.addDefectPriorityName(addPriority);
+		
+		String expectedResult=driver.getCurrentUrl();
+		Assert.assertEquals("http://106.51.127.87:3030/dot/priority.html", expectedResult, "The current url is mismatched");
+		
+		ExtentReportManager.getTest().pass("Successfully!! added a defect priority --> " + addPriority);
+		logger.info("added defect category page");
 		}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class,  dependsOnMethods="addDefectPriorityName", enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class,  dependsOnMethods="addDefectPriorityName", enabled=true)
 	public void addProjectDetails() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_P_01");
@@ -74,7 +77,7 @@ public class j_defectsTest extends BaseTest{
 		}
 	 
 	 
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addProjectDetails", enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addProjectDetails", enabled = true)
 	public void addNewDefect() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_D_02");
@@ -89,7 +92,7 @@ public class j_defectsTest extends BaseTest{
 		String category = testData.get("Category");
 		String status = testData.get("Status");
 		String priority = testData.get("Priority");
-		String closeDate = testData.get("Targeted Closure Date");
+		String closeDate = testData.get("TargetedClosureDate");
 		String Member = testData.get("Member");
 		
 		b_loginPage loginPage=new b_loginPage(driver);
@@ -101,7 +104,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("aaded the new defects");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addNewDefect", enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="addNewDefect", enabled = true)
 	public void searchWithEditText() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_D_03");
@@ -124,7 +127,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Defect priority satus updated successfully!");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="searchWithEditText", enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="searchWithEditText", enabled = true)
 	public void searchWithDeleteDefect() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_D_04");
@@ -147,7 +150,7 @@ public class j_defectsTest extends BaseTest{
 	}
 	
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=1)
 	public void verifyEmptyStepToReproduce() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -170,7 +173,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=2)
 	public void emptyClosureDateField() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -194,7 +197,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=3)
 	public void emptyCategoryNameField() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -219,7 +222,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=4)
 	public void checkTextAvailableCategoryName() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -245,7 +248,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=5)
 	public void emptyStatusField() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -270,7 +273,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=6)
 	public void checkTextAvailableStatusNameField() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -296,7 +299,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=7)
 	public void emptyProrityTypeField() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -321,7 +324,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=8)
 	public void checkTextAvailablePriorityType() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -347,7 +350,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=9)
 	public void emptyAssigneField() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -372,7 +375,7 @@ public class j_defectsTest extends BaseTest{
 		logger.info("Succesfully empty field is verified");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true, priority=10)
 	public void checkTextAvailableAssigne() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");

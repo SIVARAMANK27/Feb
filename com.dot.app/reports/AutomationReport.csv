@@ -1,0 +1,174 @@
+"Test Class","Test Name","Status","Error Message"
+"tests.b_loginPageTest","Verify_password_is_unmasked","PASS",""
+"tests.b_loginPageTest","validCredential","PASS",""
+"tests.b_loginPageTest","verify_ExceedLimit_validation","PASS",""
+"tests.b_loginPageTest","verify_InvalidCredential","PASS",""
+"tests.b_loginPageTest","verify_Empty_Credential","PASS",""
+"tests.b_loginPageTest","verify_InValid_Username_valid_Password","PASS",""
+"tests.b_loginPageTest","verify_Password_IsMasked","PASS",""
+"tests.b_loginPageTest","verify_Valid_Username_Invalid_Password","PASS",""
+"tests.b_loginPageTest","verify_Without_DomainValidation","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[text()=""Please enter a registered email!""] (tried for 10 second(s) with 500 milliseconds interval)"
+"tests.b_loginPageTest","verify_Without_DomainValidation","FAIL","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[text()=""Please enter a registered email!""] (tried for 10 second(s) with 500 milliseconds interval)"
+"tests.b_loginPageTest","verify_minPassword_validation","PASS",""
+"tests.d_projectPhaseTest","AddProjectPhaseName","PASS",""
+"tests.d_projectPhaseTest","alphabitWithSpecialCharacterNotAllowed","PASS",""
+"tests.d_projectPhaseTest","exceedingLimitVerification","PASS",""
+"tests.d_projectPhaseTest","leadingSpaceVerification","PASS",""
+"tests.d_projectPhaseTest","projectPhaseBlankvalidation","PASS",""
+"tests.d_projectPhaseTest","searchwithEditTableRecord","PASS",""
+"tests.d_projectPhaseTest","searchWithDeleteTableRecord","PASS",""
+"tests.d_projectPhaseTest","verifyNumericValueNotAllowed","PASS",""
+"tests.d_projectPhaseTest","verifySpecialCharacterNotAllowed","PASS",""
+"tests.e_defectCategoryTest","addCategoryName","PASS",""
+"tests.e_defectCategoryTest","alphabitWithSpecialCharacterNotAllowed","PASS",""
+"tests.e_defectCategoryTest","categoryBlankvalidation","SKIPPED","java.lang.AssertionError: Content mismatch expected [Please enter a name for category!] but found []"
+"tests.e_defectCategoryTest","categoryBlankvalidation","PASS",""
+"tests.e_defectCategoryTest","deleteRecordFromTable","PASS",""
+"tests.e_defectCategoryTest","editCategoryName","PASS",""
+"tests.e_defectCategoryTest","exceedingLimitVerification","PASS",""
+"tests.e_defectCategoryTest","leadingSpaceVerification","PASS",""
+"tests.e_defectCategoryTest","projectPhaseBlankvalidation","PASS",""
+"tests.e_defectCategoryTest","searchwithEditTableRecord","PASS",""
+"tests.e_defectCategoryTest","searchWithDeleteTableRecord","PASS",""
+"tests.e_defectCategoryTest","verifyNumericValueNotAllowed","PASS",""
+"tests.e_defectCategoryTest","verifySpecialCharacterNotAllowed","PASS",""
+"tests.f_defectStatusTest","addDefectStatusName","PASS",""
+"tests.f_defectStatusTest","alphabitWithSpecialCharacterNotAllowed","PASS",""
+"tests.f_defectStatusTest","blankValidation","PASS",""
+"tests.f_defectStatusTest","defectStatusBlankvalidation","PASS",""
+"tests.f_defectStatusTest","deleteRecordFromTable","PASS",""
+"tests.f_defectStatusTest","editDefectStatusNameField","PASS",""
+"tests.f_defectStatusTest","exceedingLimitVerification","PASS",""
+"tests.f_defectStatusTest","leadingSpaceVerification","PASS",""
+"tests.f_defectStatusTest","searchwithEditTableRecord","PASS",""
+"tests.f_defectStatusTest","searchWithDeleteTableRecord","PASS",""
+"tests.f_defectStatusTest","verifyNumericValueNotAllowed","PASS",""
+"tests.f_defectStatusTest","verifySpecialCharacterNotAllowed","PASS",""
+"tests.g_defectPriorityTest","addDefectPriorityName","PASS",""
+"tests.g_defectPriorityTest","alphabitWithSpecialCharacterNotAllowed","PASS",""
+"tests.g_defectPriorityTest","blankValidation","PASS",""
+"tests.g_defectPriorityTest","deleteRecordFromTable","PASS",""
+"tests.g_defectPriorityTest","editProjectPhaseName","PASS",""
+"tests.g_defectPriorityTest","exceedingLimitVerification","PASS",""
+"tests.g_defectPriorityTest","leadingSpaceVerification","PASS",""
+"tests.g_defectPriorityTest","projectPhaseBlankvalidation","SKIPPED","org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//div[text()=""Please enter a name for category!""]""}
+  (Session info: chrome=135.0.7049.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55361}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75a203adf573d4496721299e612c5e87
+*** Element info: {Using=xpath, value=//div[text()=""Please enter a name for category!""]}"
+"tests.g_defectPriorityTest","projectPhaseBlankvalidation","FAIL","org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {""method"":""xpath"",""selector"":""//div[text()=""Please enter a name for category!""]""}
+  (Session info: chrome=135.0.7049.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55391}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9532f933403512e346a905b305548627
+*** Element info: {Using=xpath, value=//div[text()=""Please enter a name for category!""]}"
+"tests.g_defectPriorityTest","searchwithEditTableRecord","PASS",""
+"tests.g_defectPriorityTest","searchWithDeleteTableRecord","PASS",""
+"tests.g_defectPriorityTest","verifyNumericValueNotAllowed","PASS",""
+"tests.g_defectPriorityTest","verifySpecialCharacterNotAllowed","PASS",""
+"tests.h_usersPageTest","emailWithoutDomainExtension","PASS",""
+"tests.h_usersPageTest","getTableRecord","PASS",""
+"tests.h_usersPageTest","navigateAddUsersPage","PASS",""
+"tests.h_usersPageTest","testEmailWithOnlyAtSymbol","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: toastMessage (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55623}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 612bb9e18dd199c599b83fa31147e5ff"
+"tests.h_usersPageTest","testEmailWithOnlyAtSymbol","FAIL","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: toastMessage (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7a668f63da3f8e0a74f8ca2943cb994"
+"tests.h_usersPageTest","testEmailWithSpaces","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: toastMessage (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55681}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cba67e8fcbbe35625d88921fc11f54a4"
+"tests.h_usersPageTest","testEmailWithSpaces","FAIL","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: toastMessage (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55710}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e9fbe07bd5468de4ad8961bf1d02743"
+"tests.h_usersPageTest","testEmailWithoutAtSymbol","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: toastMessage (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55740}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ca8fcb59bbeb352445736fa04a1089b"
+"tests.h_usersPageTest","testEmailWithoutAtSymbol","FAIL","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: toastMessage (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55768}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 06d117be34a6a203a0e52ba3bb87fae6"
+"tests.h_usersPageTest","testEmptyEmailField","PASS",""
+"tests.i_projectsTest","AddProjectPhaseName","PASS",""
+"tests.i_projectsTest","DateValidation","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=""toastMessage""] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55858}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb3c7dca309d9fec4659ea1d898ad226"
+"tests.i_projectsTest","DateValidation","PASS",""
+"tests.i_projectsTest","addProjectDetails","PASS",""
+"tests.i_projectsTest","dontSelectProjectPhase","PASS",""
+"tests.i_projectsTest","dontSelectStatus","PASS",""
+"tests.i_projectsTest","editProjectDetails","PASS",""
+"tests.i_projectsTest","deleteProjectRecords","PASS",""
+"tests.i_projectsTest","emptyValidationForProjectName","PASS",""
+"tests.i_projectsTest","emptyValidationForProjectName1","PASS",""
+"tests.i_projectsTest","exceedingLimitVerification","PASS",""
+"tests.i_projectsTest","exceedingLimitVerification1","PASS",""
+"tests.i_projectsTest","leadingSpaceVerificcation","PASS",""
+"tests.i_projectsTest","leadingSpaceVerificcation1","PASS",""
+"tests.i_projectsTest","spcialCharacterNotAllowed","PASS",""
+"tests.i_projectsTest","verifyValidTextAreAvailable","PASS",""
+"tests.i_projectsTest","verifyValidTextStatus","PASS",""
+"tests.j_defectsTest","addDefectPriorityName","PASS",""
+"tests.j_defectsTest","addProjectDetails","PASS",""
+"tests.j_defectsTest","addNewDefect","PASS",""
+"tests.j_defectsTest","searchWithEditText","PASS",""
+"tests.j_defectsTest","searchWithDeleteDefect","PASS",""
+"tests.j_defectsTest","verifyEmptyStepToReproduce","PASS",""
+"tests.j_defectsTest","emptyClosureDateField","PASS",""
+"tests.j_defectsTest","emptyCategoryNameField","PASS",""
+"tests.j_defectsTest","checkTextAvailableCategoryName","PASS",""
+"tests.j_defectsTest","emptyStatusField","PASS",""
+"tests.j_defectsTest","checkTextAvailableStatusNameField","PASS",""
+"tests.j_defectsTest","emptyProrityTypeField","PASS",""
+"tests.j_defectsTest","checkTextAvailablePriorityType","PASS",""
+"tests.j_defectsTest","emptyAssigneField","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=""toastMessage""] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56755}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aea004d8392034096012efbb10b37bcd"
+"tests.j_defectsTest","emptyAssigneField","FAIL","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=""toastMessage""] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56791}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2e75736a4b75f261d9856cc66516086"
+"tests.j_defectsTest","checkTextAvailableAssigne","SKIPPED","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=""toastMessage""] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c9f1d7e41902ba3329f8f02900f9179"
+"tests.j_defectsTest","checkTextAvailableAssigne","FAIL","org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=""toastMessage""] (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6FOLHBH', ip: '192.168.1.20', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.115, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56860}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe03a5048ee2e5c4dc12a4722f206e4e"

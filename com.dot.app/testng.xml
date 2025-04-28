@@ -5,49 +5,17 @@
 	<listeners>
 		<listener class-name="listeners.TestListener" />
 	</listeners>
-
-
-	<test thread-count="5" name="d_projectPhaseTest" preserve-order="true">
+	<test thread-count="5" name="myTest" preserve-order="true">
 		<classes>
+		<class name="tests.b_loginPageTest" />
 			<class name="tests.d_projectPhaseTest" />
-		</classes>
-	</test> <!--Test -->
+			<class name="tests.e_defectCategoryTest" /> 
+			<class name="tests.f_defectStatusTest" /> 
 
-	<test thread-count="5" name="e_defectCategoryTest" preserve-order="true">
-		<classes>
-			<class name="tests.e_defectCategoryTest" />
-		</classes>
-	</test> <!--Test -->
-
-	<test thread-count="5" name="f_defectStatusTest" preserve-order="true">
-		<classes>
-			<class name="tests.f_defectStatusTest" />
-		</classes>
-	</test> <!--Test -->
-
-	<test thread-count="5" name="g_defectPriorityTest" preserve-order="true">
-		<classes>
 			<class name="tests.g_defectPriorityTest" />
+		<class name="tests.h_usersPageTest" />
+		<class name="tests.i_projectsTest" />
+		<class name="tests.j_defectsTest" />
 		</classes>
-	</test> <!--Test -->
-
-	<test thread-count="5" name="h_usersPageTest" preserve-order="true">
-		<classes>
-			<class name="tests.h_usersPageTest" />
-		</classes>
-	</test> <!--Test -->
-
-	<test thread-count="5" name="i_projectsTest" preserve-order="true">
-		<classes>
-			<class name="tests.i_projectsTest" />
-		</classes>
-	</test> <!--Test -->
-
-	<test thread-count="5" name="j_defectsTest" preserve-order="true">
-		<classes>
-			<class name="tests.j_defectsTest" />
-		</classes>
-	</test> <!--Test -->
-
-
+	</test> 
 </suite> <!--Suite -->

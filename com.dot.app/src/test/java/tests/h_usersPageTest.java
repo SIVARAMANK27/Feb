@@ -2,15 +2,18 @@ package tests;
 
 import java.util.Map;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.b_loginPage;
 import pages.h_userPage;
+import utils.CSVTestListener;
 import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class h_usersPageTest extends BaseTest {
 	
 	private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
@@ -65,7 +68,7 @@ public class h_usersPageTest extends BaseTest {
 	}
 	
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void emailWithoutDomainExtension() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_02");
@@ -87,7 +90,7 @@ public class h_usersPageTest extends BaseTest {
 		logger.info("Excecution is completed");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void testEmailWithoutAtSymbol() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_02");
@@ -109,7 +112,7 @@ public class h_usersPageTest extends BaseTest {
 		logger.info("Excecution is completed");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void testEmailWithOnlyAtSymbol() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_02");
@@ -131,7 +134,7 @@ public class h_usersPageTest extends BaseTest {
 		logger.info("Excecution is completed");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void testEmptyEmailField() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_02");

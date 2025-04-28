@@ -1,27 +1,35 @@
 package tests;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.b_loginPage;
 import pages.a_registerPage;
+import utils.CSVTestListener;
+import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class a_regPageTest extends BaseTest {
+	
+	private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
+	private static final String SHEET_NAME = "Projects";
 	
 	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
 	public void verify_RegistrationPage_hyperLink() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_01");
-
+		
 		a_registerPage reg = new a_registerPage(driver);
 		reg.createanaccount();
 		String ExpectedResult = driver.getTitle();
@@ -31,11 +39,16 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_RegistrationPage_hyperLink")
 	public void verify_maximumTeamNameValidation(String value) {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_02");
 		
+		  String testCaseName = "maximumTeamNameValidation"; // The specific test case you want to run
+		  Map<String, String> testData = ExcelReader.getTestCaseData(EXCEL_PATH, SHEET_NAME, testCaseName);
+		  String username = testData.get("Username");
+		  String password = testData.get("Password");
+			
 		a_registerPage reg = new a_registerPage(driver);
 		reg.createanaccount();
 		reg.verfifyteamTextBox();
@@ -45,7 +58,7 @@ public class a_regPageTest extends BaseTest {
 
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_maximumTeamNameValidation")
 	public void verify_manimumTeamName() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_03");
@@ -57,7 +70,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_manimumTeamName")
 	public void verify_emptyTeamNameFieldValidation() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_04");
@@ -81,7 +94,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_emptyTeamNameFieldValidation")
 	public void verify_ValidTeamName() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_05");
@@ -91,14 +104,14 @@ public class a_regPageTest extends BaseTest {
 		WebElement targetElement = driver.findElement(By.xpath("//button[text()=\"Create Account\"]"));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(targetElement).click().perform();
-		boolean yourEmail = driver.findElement(By.id("userEmail")).isDisplayed();
+		boolean yourEmail = driver.findElement(By.id("userEmail")).isDisplayed(); 
 		Assert.assertEquals(yourEmail, true);
 		logger.info("verified valid username");
 		ExtentReportManager.getTest().pass("Verified valid username");
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_ValidTeamName")
 	public void verify_validUserName() {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_Reg_06");
@@ -113,7 +126,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_validUserName")
 	public void emptyValidation_username() {
 		logger.info("Starting test case ...");
 		ExtentReportManager.createTest("TS_Reg_07");
@@ -132,7 +145,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="emptyValidation_username")
 	public void verify_ValidEmailAddress() {
 		logger.info("Starting test case ...");
 		ExtentReportManager.createTest("TS_Reg_08");
@@ -150,7 +163,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_ValidEmailAddress")
 	public void verify_emptyValidationEmailAddress() {
 		logger.info("Starting test case ...");
 		ExtentReportManager.createTest("TS_Reg_09");
@@ -162,7 +175,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="verify_emptyValidationEmailAddress")
 	public void PasswordValidationTest() {
 		logger.info("Starting test case ...");
 		ExtentReportManager.createTest("TS_Reg_10");
@@ -174,7 +187,7 @@ public class a_regPageTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false, dependsOnMethods="PasswordValidationTest")
 	public void GetListOfWebElement() {
 		logger.info("Starting test case ...");
 		ExtentReportManager.createTest("TS_Reg_11");

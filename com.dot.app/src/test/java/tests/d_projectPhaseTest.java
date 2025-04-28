@@ -3,20 +3,23 @@ package tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import base.BaseTest;
 import pages.b_loginPage;
 import pages.d_projectPhase;
+import utils.CSVTestListener;
 import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class d_projectPhaseTest extends BaseTest {
 
 	 private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
 	 private static final String SHEET_NAME = "ProjectPhase";
 	 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void AddProjectPhaseName() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_PH_01");
@@ -41,7 +44,7 @@ public class d_projectPhaseTest extends BaseTest {
 		logger.info("added defect category page");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="AddProjectPhaseName", enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="AddProjectPhaseName", enabled = true)
 	public void searchwithEditTableRecord() throws InterruptedException {
 	
 			logger.info("Starting Login Test...");
@@ -65,7 +68,7 @@ public class d_projectPhaseTest extends BaseTest {
 			logger.info("search and edit the record from table");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="searchwithEditTableRecord", enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, dependsOnMethods="searchwithEditTableRecord", enabled = true)
 	public void searchWithDeleteTableRecord() throws InterruptedException {
 		
 			logger.info("Starting Login Test...");
@@ -117,7 +120,7 @@ public class d_projectPhaseTest extends BaseTest {
 		System.out.println("Successfully deleted the record from table");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void verifySpecialCharacterNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -136,7 +139,7 @@ public class d_projectPhaseTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void verifyNumericValueNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -155,7 +158,7 @@ public class d_projectPhaseTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void alphabitWithSpecialCharacterNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -176,7 +179,7 @@ public class d_projectPhaseTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void projectPhaseBlankvalidation() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -198,7 +201,7 @@ public class d_projectPhaseTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void exceedingLimitVerification() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -220,7 +223,7 @@ public class d_projectPhaseTest extends BaseTest {
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void leadingSpaceVerification() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");

@@ -3,19 +3,22 @@ package tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.b_loginPage;
 import pages.f_defectStatus;
+import utils.CSVTestListener;
 import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class f_defectStatusTest extends BaseTest{
 
 	 private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
-	 private static final String SHEET_NAME = "Defect_Status";
+	 private static final String SHEET_NAME = "DefectStatus";
 	 
 	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void addDefectStatusName() {
@@ -95,7 +98,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("search and deleted the record from table");
 	}
 	
-	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void defectStatusBlankvalidation() {
 	try {
 		logger.info("Starting Login Test...");
@@ -108,7 +111,7 @@ public class f_defectStatusTest extends BaseTest{
 		f_defectStatus projectPhase=new f_defectStatus(driver);
 		String expectedResult=projectPhase.blankValidation_popup();
 		driver.getWindowHandle();
-		Assert.assertEquals(expectedResult, "Please enter a name for category!","Content mismatch");
+		Assert.assertEquals(expectedResult, "Please enter a name for status!","Content mismatch");
 	} catch (InterruptedException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -117,7 +120,7 @@ public class f_defectStatusTest extends BaseTest{
 	logger.info("defect Status Blank validation");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void editDefectStatusNameField() {
 	
 		try {
@@ -138,7 +141,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("updated the edit field");
 	}
 	
-	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test (retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void deleteRecordFromTable() {
 		try {
 			logger.info("Starting Login Test...");
@@ -178,7 +181,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void verifyNumericValueNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -198,7 +201,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void alphabitWithSpecialCharacterNotAllowed() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_01");
@@ -219,7 +222,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void blankValidation() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -241,7 +244,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void exceedingLimitVerification() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -263,7 +266,7 @@ public class f_defectStatusTest extends BaseTest{
 		logger.info("Login test passed.");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled = true)
 	public void leadingSpaceVerification() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");

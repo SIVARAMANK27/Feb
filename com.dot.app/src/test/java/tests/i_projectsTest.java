@@ -3,16 +3,19 @@ package tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.b_loginPage;
 import pages.d_projectPhase;
 import pages.i_projectsPage;
+import utils.CSVTestListener;
 import utils.ExcelReader;
 import utils.ExtentReportManager;
 import utils.RetryAnalyzer;
 
+@Listeners(CSVTestListener.class)
 public class i_projectsTest extends BaseTest{
 	
 	private static final String EXCEL_PATH = "src\\test\\resources\\TestData.xlsx";
@@ -123,7 +126,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void emptyValidationForProjectName() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -146,7 +149,7 @@ public class i_projectsTest extends BaseTest{
 	}
 	
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void spcialCharacterNotAllowed() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -168,7 +171,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void exceedingLimitVerification() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -190,7 +193,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void leadingSpaceVerificcation() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -212,7 +215,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void leadingSpaceVerificcation1() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -235,7 +238,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void exceedingLimitVerification1() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -258,7 +261,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void emptyValidationForProjectName1() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -281,7 +284,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void verifyValidTextAreAvailable() throws InterruptedException {
 	
 		logger.info("Starting Login Test...");
@@ -305,7 +308,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void dontSelectProjectPhase() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -329,7 +332,7 @@ public class i_projectsTest extends BaseTest{
 	}
 	
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void verifyValidTextStatus() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -354,7 +357,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void dontSelectStatus() throws InterruptedException {
 		
 		logger.info("Starting Login Test...");
@@ -378,7 +381,7 @@ public class i_projectsTest extends BaseTest{
 		logger.info("deleted a project details");
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=false)
+	@Test(retryAnalyzer = RetryAnalyzer.class, enabled=true)
 	public void DateValidation() throws InterruptedException {
 		logger.info("Starting Login Test...");
 		ExtentReportManager.createTest("TS_DC_04");
