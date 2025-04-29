@@ -251,7 +251,7 @@ public class d_projectPhase {
 
 	}
 	
-public void specialCharacterNotAllowed(String phaseName1) throws InterruptedException {
+	public void specialCharacterNotAllowed(String phaseName1) throws InterruptedException {
 		
 		Thread.sleep(5000);
 		projectPhase.click();
@@ -302,7 +302,7 @@ public void specialCharacterNotAllowed(String phaseName1) throws InterruptedExce
 		}
 	
 	public void blankValidation(String phaseName1) throws InterruptedException {
-		Thread.sleep(5000);
+		
 		projectPhase.click();
 		
 		add.click();

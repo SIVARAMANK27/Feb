@@ -8,11 +8,11 @@
 	<test thread-count="5" name="myTest" preserve-order="true">
 		<classes>
 		<class name="tests.b_loginPageTest" />
-			<class name="tests.d_projectPhaseTest" />
-			<class name="tests.e_defectCategoryTest" /> 
-			<class name="tests.f_defectStatusTest" /> 
+		<class name="tests.d_projectPhaseTest" />
+		<class name="tests.e_defectCategoryTest" /> 
+		<class name="tests.f_defectStatusTest" /> 
 
-			<class name="tests.g_defectPriorityTest" />
+		<class name="tests.g_defectPriorityTest" />
 		<class name="tests.h_usersPageTest" />
 		<class name="tests.i_projectsTest" />
 		<class name="tests.j_defectsTest" />
